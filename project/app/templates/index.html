@@ -65,15 +65,13 @@
 									<li><a href="#">About</a></li>
 									<li><a href="#">Services</a></li>
 									<li><a href="#">Contacts</a></li>
-									<li>          <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+									<li><form class="navbar-form" role="search" action="{% url 'search_results' %}">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
               <div class="input-group-btn">
                 <button class="btn btn-primary" >Search</button>
               </div>
-            </div>
-
-          </form></li>
+            </div></form></li>
 								</ul>
 							</nav>
 							<div class="clear"></div>
@@ -82,6 +80,24 @@
 					</div>
 				</div>
 				<div class="container_12">
+					{% if user.is_authenticated %}
+	<ul>
+				<li>
+					<a href="{%url 'new-cargo'%}">Add cargo</a>
+				</li>
+				<li>
+					<a href="{%url 'cargo'%}">Cargo List</a>
+				</li>
+				<li>
+					<a href="/logout">Logout</a>
+				</li>
+	</ul>
+	{% else %}
+	<li>
+		<a class='btn btn-default' href="/accounts/login">Login</a>
+	</li>
+
+	{% endif %}
 					<div class="grid_12">
 						<h1>
 							<a href="{% static 'index.html' %}">
