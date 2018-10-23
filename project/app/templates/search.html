@@ -1,0 +1,47 @@
+{%extends 'base.html'%} {% load bootstrap3 %} {% load staticfiles %} {%block content%}
+
+<head>
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+</head>
+<body>
+<div class="container">
+
+  <div class="row">
+    {% if referenceID%}
+      <h2>Found {{ referenceID|length }} of searched term {{message}}</h2>
+    {% else %}
+      <h2> Found 0 referenceID for the search term {{message}}</h2>
+    {% endif %}
+  </div>
+
+  <!-- <div class="row"> -->
+
+  {% if referenceID %}
+    {% for result in referenceID%}
+    <div class="card" >
+  <div class="card-header">
+    <strong><h2>Cargo Details</h2></strong>
+</div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong>Sender Name</strong> :{{result.SenderName}}</li>
+    <li class="list-group-item"><strong>Sender Address</strong> :{{result.SenderAddress}}</li>
+    <li class="list-group-item"><strong>Reciever Name</strong> :{{result.RecieverName}}</li>
+    <li class="list-group-item"><strong>Reciever Address</strong> :{{result.RecieverAddress}}</li>
+    <li class="list-group-item"><strong>ReferenceId</strong> :{{result.referenceID}}</li>
+    <li class="list-group-item"><strong>Goods are From</strong> :{{result.GoodsareFrom}}</li>
+    <li class="list-group-item"><strong>Goods To</strong> :{{result.GoodsTo}}</li>
+    <li class="list-group-item"><strong>Depature Date</strong> :{{result.DepatureDate}}</li>
+    <li class="list-group-item"><strong>Depature time</strong> :{{result.Depaturetime}}</li>
+    <li class="list-group-item"><strong>Arrival Date</strong> :{{result.ArrivalDate}}</li>
+    <li class="list-group-item"><strong>Arrival Time</strong> :{{result.ArrivalTime}}</li>
+    <li class="list-group-item"><strong>Goods Description</strong> :{{result.GoodsDescription}}</li>
+    <li class="list-group-item"><strong>Status</strong> :{{result.Status}}</li>
+  </ul>
+
+  </div>
+    {% endfor %}
+  {% endif %}
+  <!-- </div> -->
+</div>
+</body>
+{% endblock %}

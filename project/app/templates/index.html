@@ -2,289 +2,1017 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    <link rel="stylesheet" href="{% static 'css/stellarnav.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body class="home-one">
-
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!--- PRELOADER -->
-    <div class="preeloader">
-        <div class="preloader-spinner"></div>
-    </div>
-
-    <!--SCROLL TO TOP-->
-    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
-
-    <!--START TOP AREA-->
-    <header class="top-area" id="home">
-        <div class="top-area-bg" data-stellar-background-ratio="0.6"></div>
-        <div class="header-top-area">
-            <!--MAINMENU AREA-->
-            <div class="mainmenu-area" id="mainmenu-area">
-                <div class="mainmenu-area-bg"></div>
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="http://pngimage.net/wp-content/uploads/2018/06/logo-placeholder-png.png" height:"1px;" width="70px;" alt="logo"></a>
-                        </div>
-                        <div id="main-nav" class="stellarnav">
-                            <ul id="nav" class="nav navbar-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">Service</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <input type="text" name="" value="">
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+      <body class="" id="top">
+		<div class="main">
+<!--==============================header=================================-->
+			<header>
+        <!-- <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
+              <div class="input-group-btn">
+                <button class="btn btn-primary" >Search</button>
+              </div>
             </div>
-            <!--END MAINMENU AREA END-->
-        </div>
-        <!--HOME SLIDER AREA-->
-        <div class="welcome-slider-area">
-            <div class="welcome-single-slide slider-bg-one">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>Water Freight Transportaion</h1>
-                                <p>Trust. Transparency. Tranquility.</p>
-                                <div class="home-button">
-                                    <a href="#">Contact Us</a>
-                                    <a href="#">Track Shipment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="welcome-single-slide slider-bg-two">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>Road Transportation</h1>
-                                <p>Efficient. Safe. Reliable.</p>
-                                <div class="home-button">
-                                    <a href="#">Contact Us</a>
-                                    <a href="#">Track Shipment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="welcome-single-slide slider-bg-three">
-                <div class="container">
-                    <div class="row flex-v-center">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="welcome-text text-center">
-                                <h1>Warehouseing and storage</h1>
-                                <p>Smart people. Great solutions.</p>
-                                <div class="home-button">
-                                    <a href="#">Contact Us</a>
-                                    <a href="#">Track Shipment</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END HOME SLIDER AREA-->
-    </header>
-    <!--END TOP AREA-->
-
-    <!--BLOG AREA-->
-    <section class="blog-area gray-bg padding-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-image">
-                            <img src="https://www.pakmail.com/sites/all/themes/pakmail_zen/images/views/ocean-freight.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
-                            <h3>Ocean Freight</h3>
-                            <p>Possibility in every direction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="blog-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9RN8AShF_XeGJsy9EaECwNk17mEQAZEYhAUdEMxOx1Mw3UOb" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
-                            <h3><a href="single-blog.html">Air Freight</a></h3>
-                            <p>Safe and fast, We get it there.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                    <div class="single-blog wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-image">
-                            <img src="http://www.roadfreightnsw.com.au/wp-content/uploads/2018/04/bn_4.jpg" alt="">
-                        </div>
-                        <div class="blog-details text-center">
-                            <div class="blog-meta"><a href="#"><i class="fa fa-truck"></i></a></div>
-                            <h3><a href="single-blog.html">Street Freight</a></h3>
-                            <p>On the road and on time!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--BLOG AREA END-->
-
-    <!--SERVICE AREA-->
-    <section class="service-area">
-        <div class="service-top-area padding-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                        <div class="area-title text-center wow fadeIn">
-                            <h2>Our Service</h2>
-                            </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-                        <div class="service-content wow fadeIn">
-                            <h2>we offer quick & powerful logistics solution</h2>
-                            <h3>Below is a brief explanation of our sevices:</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                        <div class="service-catalouge-content-area wow fadeIn">
-                            <div class="service-catalouge-bg"></div>
-                            <div class="row">
-                                <div class="col-md-7 col-lg-7 col-md-offset-5 col-lg-offset-5 col-sm-12 col-xs-12">
-                                    <div class="catalouge-content">
-                                        <h3>Why Choose Us ?</h3>
-                                        <ul>
-                                            <li><i class="fa fa-check"></i> A Partnership Based On Trust.</li>
-                                            <li><i class="fa fa-check"></i> Go Beyond Logistics, Make The World Go Round And Revolution Business.</li>
-                                            <li><i class="fa fa-check"></i> Shipments delivered on time with no hassle.</li>
-                                            <li><i class="fa fa-check"></i> We take pride in serving our customers safely.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="service-bottom-area section-padding">
-            <div class="service-bottom-area-bg"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-12 col-xs-12">
-                        <div class="service-list wow fadeIn">
-                            <div class="single-service">
-                                <div class="service-icon-hexagon">
-                                    <div class="hex">
-                                        <div class="service-icon">
-                                            <i class="fa fa-dropbox"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="service-details">
-                                    <h4>Ware House</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    <a href="#">read more</a>
-                                </div>
-                            </div>
-                            <div class="single-service">
-                                <div class="service-icon-hexagon">
-                                    <div class="hex">
-                                        <div class="service-icon"><i class="fa fa-truck"></i></div>
-                                    </div>
-                                </div>
-                                <div class="service-details">
-                                    <h4>Road Freight</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    <a href="#">read more</a>
-                                </div>
-                            </div>
-                            <div class="single-service">
-                                <div class="service-icon-hexagon">
-                                    <div class="hex">
-                                        <div class="service-icon"><i class="fa fa-ship"></i></div>
-                                    </div>
-                                </div>
-                                <div class="service-details">
-                                    <h4>Sea Freight</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    <a href="#">read more</a>
-                                </div>
-                            </div>
-                            <div class="single-service">
-                                <div class="service-icon-hexagon">
-                                    <div class="hex">
-                                        <div class="service-icon"><i class="fa fa-plane"></i></div>
-                                    </div>
-                                </div>
-                                <div class="service-details">
-                                    <h4>Air Freight</h4>
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                                    <a href="#">read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--SERVICE AREA END-->
-    <br>
-    <!--FOOER AREA-->
-    <div class="footer-area dark-bg">
-        <div class="footer-area-bg"></div>
-        <div class="footer-copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="footer-copyright wow fadeIn">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                        <div class="footer-social-bookmark text-right wow fadeIn">
-                            <ul class="social-bookmark">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--FOOER AREA END-->
-  </body>
+          </form> -->
+				<div class="menu_block">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li><a href="index.html">Home</a></li>
+									<li class="current"><a href="index-1.html">About</a></li>
+									<li><a href="index-2.html">Cars</a></li>
+									<li><a href="index-3.html">Services</a></li>
+									<li><a href="index-4.html">Contacts</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="container_12">
+					<div class="grid_12">
+						<h1>
+							<a href="index.html">
+								<img src="images/logo.png" alt="Your Happy Family">
+							</a>
+						</h1>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</header>
+<!--==============================Content=================================-->
+			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+				<div class="container_12">
+					<div class="grid_7">
+						<h3>A Few Words About Us</h3>
+						<img src="images/page2_img1.jpg" alt="" class="img_inner fleft">
+						<div class="extra_wrapper">
+							<div class="text1 color2">
+								<a href="#">Lorem ipsum dolor sit amet, consecteturpiscinger elit. </a>
+							</div>
+							<p>Want to know more about the free theme produced by TemplateMonster? Click this <span class="color1"><a href="http://blog.templatemonster.com/free-website-templates/" rel="dofollow">link</a></span>.</p>
+							One theme is not enough for you to make a choice? Browse the vast variety of <span class="color1"><a href="http://www.templatemonster.com/properties/topic/society-people/" rel="nofollow">car templates</a></span> at TemplateMonster’s website.
+						</div>
+						<div class="clear cl1"></div>
+						<p>Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio ut veliter loki molo. Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum atermolok commodo luctus erito libero.</p>
+						Praesent faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequatertolomon.
+						Curabitur vel lorem sit amet nulla ullamcorper fermentum.
+					</div>
+					<div class="grid_4 prefix_1">
+						<h3>Why Choose Us</h3>
+						<ul class="list li">
+							<li class="list_count">1</li>
+							<li class="extra_wrapper">
+								<div class="text1 color2"><a href="#">Econsecteturpiscinger elit</a></div>
+								Sit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio ut
+							</li>
+						</ul>
+						<ul class="list li">
+							<li class="list_count">2</li>
+							<li class="extra_wrapper">
+								<div class="text1 color2"><a href="#">Fconsecteturpiscingerelite</a></div>
+								Git meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio
+							</li>
+						</ul>
+						<ul class="list li">
+							<li class="list_count">3</li>
+							<li class="extra_wrapper">
+								<div class="text1 color2"><a href="#">Hconsecteturpiscingeliter</a></div>
+								Hit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibut velit.
+							</li>
+						</ul>
+						<ul class="list li">
+							<li class="list_count">4</li>
+							<li class="extra_wrapper">
+								<div class="text1 color2"><a href="#">Mconsecteturpiscinr elitwert</a></div>
+								Kit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuabh odio uter
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="grid_12">
+						<h3 class="h3__ind1">Testimonials</h3>
+					</div>
+					<div class="grid_4">
+						<blockquote class="bq1">
+							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magna... </i></p>
+							<div class="color2">Tim Barkley</div>
+						</blockquote>
+					</div>
+					<div class="grid_4">
+						<blockquote class="bq1">
+							<p><i>Dorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magwe... </i></p>
+							<div class="color2">Linda Grey</div>
+						</blockquote>
+					</div>
+					<div class="grid_4">
+						<blockquote class="bq1">
+							<p><i>Gorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctoro magndales...</i></p>
+							<div class="color2">Ann Pool</div>
+						</blockquote>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Call Us:</span> + 1800 559 6580</div>
+					<div class="socials">
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand">Tour<span class="color1">T</span>axi </div>
+						&copy; 2014	| <a href="#">Privacy Policy</a> </div> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>
+	</body>
 </html>
 <style media="screen">
-  
+@import "reset.css";
+@import "grid.css";
+@import "font-awesome.css";
+@import "superfish.css";
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:600);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic);
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400);
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:700);
+@import url(//fonts.googleapis.com/css?family=Marvel:400);
+@import url(//fonts.googleapis.com/css?family=Marvel:700);
+
+html {
+	width: 100%;
+
+}
+a[href^="tel:"] {
+ color: inherit;
+ text-decoration: none;
+}
+
+* {
+	-webkit-text-size-adjust: none;
+}
+
+body {
+	position: relative;
+    background-color: #4a4a4a;
+    color: #878787;
+    font: 14px/20px 'Open Sans', sans-serif;
+}
+
+.ic {
+	border:0;
+	float:right;
+	background:#fff;
+	color:#f00;
+	width:50%;
+	line-height:10px;
+	font-size:10px;
+	margin:-220% 0 0 0;
+	overflow:hidden;
+	padding:0
+}
+
+strong {
+	font-weight: 700;
+}
+
+address {
+	font-style: normal;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+input {
+	border-radius: 0 !important;
+	outline: none !important;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+
+/****Heads****/
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+	color: #3e454c;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 36px;
+    color: #313030;
+    padding-top: 14px;
+    margin-bottom: 20px;
+}
+
+.page1 h3 {
+    margin-bottom: 46px;
+    padding-top: 82px;
+}
+
+.h3__ind1 {
+    padding-top: 76px;
+    margin-bottom: 39px;
+}
+
+/****Lists****/
+
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.list {
+}
+
+.list li {
+    overflow: hidden;
+}
+
+.list_count {
+    float: left;
+    text-align: center;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    margin-top: 4px;
+    margin-right: 13px;
+    background-color: #fdc903;
+    font: 36px/44px 'Roboto Condensed', sans-serif;
+}
+
+.list li .text1 {
+    margin-bottom: 3px;
+}
+
+.list li+li {
+    margin-top: 19px;
+}
+
+
+/****Links****/
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+a:hover {
+	color: #fdc903;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fdc903;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 26px 8px 25px;
+}
+
+.btn:hover {
+    background-color: #585757;
+}
+
+#bookingForm .btn {
+    margin-top: 13px !important;
+}
+
+/****classes****/
+
+.mb0 {
+	margin-bottom: 0px !important;
+}
+.m0 {
+	margin: 0 !important;
+}
+.pad0 {
+	padding: 0 !important;
+}
+
+.pad1 {
+}
+
+
+.img_inner {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 17px;
+	margin-top: 7px;
+}
+
+
+.fleft {
+	float: left;
+	width: auto !important;
+	margin-right: 32px;
+	margin-bottom: 0px;
+	margin-top: 4px;
+}
+
+.page1 .fleft {
+    margin-top: 5px;
+}
+
+.page1 .fleft {
+    margin-right: 16px;
+}
+
+.oh {
+	overflow: hidden;
+}
+.fright {
+	float: right !important;
+}
+.upp {
+	text-transform: uppercase;
+}
+
+.alright {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+.wrapper, .extra_wrapper {
+	overflow: hidden;
+}
+.clear {
+	float: none !important;
+	clear: both;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+/*header*/
+
+.main {
+    background-color: #fff;
+}
+
+header {
+	display: block;
+}
+
+
+header h1 {
+	position: relative;
+	text-align: center;
+    padding-top: 55px;
+}
+
+.page1 header h1 {
+    margin-bottom: 20px;
+}
+
+
+header h1 a {
+	display: inline-block;
+	overflow: hidden;
+	width: 251px;
+    height: 122px;
+	font-size: 0;
+	line-height: 0;
+
+	text-indent: -999px;
+	transition: 0s ease;
+	-o-transition: 0s ease;
+	-webkit-transition: 0s ease;
+}
+header h1 a img {
+	display: block;
+}
+
+.banner {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #e5e5e7;
+    margin: 55px 0 87px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 30px 24px 40px;
+}
+
+
+.banner_title {
+    overflow: hidden;
+    padding-top: 19px;
+    color: #2a2929;
+    font-size: 46px;
+    line-height: 48px;
+    margin-bottom: 9px;
+}
+
+.banner img {
+    position: relative;
+    top: -1px;
+    float: left;
+    margin-right: 17px;
+}
+
+.banner a {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    margin-top: -10px;
+    color: #959596;
+}
+
+.banner a:hover {
+    color: #6b6b6c;
+}
+
+.c_phone {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    padding: 62px 0 61px;
+    text-align: center;
+    font-size: 65px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #fdc903;
+}
+
+.c_phone span {
+    padding-top: 30px;
+    padding-left: 45px;
+    font-size: 50px;
+    display: block;
+}
+
+.c_phone .fa {
+    font-size: 48px;
+    line-height: 48px;
+    margin-right: 10px;
+    position: relative;
+    top: -9px;
+}
+
+.c_phone>div>div {
+    position: relative;
+}
+
+.c_phone>div>div:after {
+    position: absolute;
+    background: url(../images/tax_bg.png) 0 0 no-repeat;
+    width: 183px;
+    height: 53px;
+    content: '';
+    left: 0;
+    top: 50%;
+    margin-top: -31px;
+}
+
+.c_phone>div>div:before {
+    position: absolute;
+    background: url(../images/tax_bg.png) 0 0 no-repeat;
+    width: 183px;
+    height: 53px;
+    content: '';
+    right: 0;
+    top: 50%;
+    margin-top: -31px;
+}
+
+/**Content**/
+
+.content {
+    padding-bottom: 113px;
+}
+.page1  .content {
+    padding-bottom: 82px;
+}
+
+.type {
+    border: 1px solid #ebeaea;
+    position: relative;
+    margin-top: 84px;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.type_caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 312px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../images/capt_bg.png) 0 0 repeat;
+    color: #fff;
+    font-size: bold;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 7px 30px 8px;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+
+.type:hover .type_caption {
+    width: 100%;
+}
+
+.type+.type {
+    margin-top: 11px;
+}
+
+.type+.type+.type {
+    margin-top: 10px;
+}
+
+.text1 {
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.cl1 {
+    height: 24px;
+}
+
+.bq1 {
+    padding: 61px 38px 26px 46px;
+    background: url(../images/quotes.png) 31px 33px no-repeat #e5e5e7;
+}
+
+.bq1 .color2 {
+    color: #727171;
+    text-align: right;
+    font: 18px/20px 'Roboto Condensed', sans-serif;
+}
+
+.bq1:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: -27px;
+    left: 67px;
+    border-style: solid;
+    border-width: 27px 0 0 40px;
+    border-color: #cfcfd0 transparent transparent transparent;
+}
+
+.gallery {
+    overflow: hidden;
+    padding-top: 27px;
+}
+
+a.gal {
+    background: url(../images/magnifier.png) center center no-repeat #fdc903;
+    margin-right: 1px;
+    margin-bottom: 27px;
+    display: block;
+    border: 1px solid #ebeaea;
+    border-right-width: 2px;
+}
+
+a.gal img {
+    width: 100%;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    box-shadow: 0 0 0 #fff;
+}
+
+a.gal:hover img {
+    opacity: 0.2;
+}
+
+.box {
+    margin-bottom: 23px;
+    margin-top: 4px;
+    background-color: #e5e5e7;
+    padding: 23px 22px 28px;
+}
+
+.box img {
+    margin-bottom: 25px;
+}
+
+.box a.btn {
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 23px;
+}
+
+/**Map**/
+
+.color1 {
+    color: #fdc903;
+}
+
+.color1 a:hover , a.color1:hover {
+    color: #4a4a4a;
+}
+
+.color2 {
+    color: #4a4a4a;
+}
+
+.map {
+    overflow: hidden;
+    position: relative;
+}
+
+
+.map figure {
+    padding: 27px 0 10px;
+    position: relative;
+	display: block;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.map figure iframe {
+	width: 100%;
+	height: 399px;
+	max-width: 100%;
+}
+.map address {
+	display: block;
+}
+
+.map .text1 {
+    padding-top: 8px;
+}
+
+.map address dt {
+}
+
+ address dd span {
+	display: inline-block;
+	text-align: left;
+}
+
+
+
+/**Footer**/
+
+footer {
+	display: block;
+    padding: 0px 0 60px;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.copy {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.st1 {
+    padding-top: 80px;
+    color: #e2e2e2;
+    margin-bottom: 8px;
+}
+
+.brand {
+    position: relative;
+    top: -7px;
+    font: 30px/18px 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.f_phone {
+    padding-top: 72px;
+    font-size: 40px;
+    line-height: 36px;
+    float: right;
+    color: #e2e2e2;
+}
+
+.f_phone  span {
+    position: relative;
+    top: 4px;
+    font-size: 30px;
+}
+
+.socials {
+    margin-right: 96px;
+    padding-top: 82px;
+    float: right;
+    overflow: hidden;
+}
+
+.socials a {
+    display: block;
+    float: left;
+    margin: 0 6px 0 7px;
+    color: #fff;
+    text-align: center;
+    background-color: #fdc903;
+    border-radius: 500px;
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+    line-height: 58px;
+}
+
+.socials a:hover {
+    color: #fdc903;
+    background-color: #585757;
+}
+
+#toTop {
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 40px;
+    left: 51%;
+    margin-left: 610px;
+    overflow: hidden;
+    width: 61px;
+    height: 75px;
+    border: none;
+    text-indent: -999px;
+    z-index: 20;
+    background: url(../images/totop.png) no-repeat left 0;
+    transition: 0s ease;
+    -o-transition: 0s ease;
+    -webkit-transition: 0s ease;
+}
+#toTop:hover {
+    outline: none;
+    background-position: right 0;
+}
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+
+@media only screen and (max-width: 995px) {
+ body {
+ min-width: 768px;
+}
+
+
+.fl1 {
+    float: none;
+    margin-left: 0 !important;
+    width: auto;
+}
+
+ .map figure,  .map figure iframe,  #form input,  #form textarea,  #form .success {
+ width: 100% !important;
+ float: none !important;
+}
+ #form .success {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ box-sizing: border-box;
+}
+ .map figure {
+ height: auto !important;
+}
+ .extra_wrapper {
+ overflow: visible;
+}
+
+.map figure {
+	margin-bottom: 15px;
+}
+
+.nowrap {
+    white-space: normal;
+}
+
+
+.caption .price {
+    display: none;
+}
+
+.caption {
+    padding-top: 20px;
+}
+
+
+.camera_prev {
+    margin-left: -374px;
+}
+
+.camera_next  {
+    margin-right: -374px;
+}
+
+.fl1.fl2 {
+    clear: both;
+}
+
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+body {
+    min-width: 420px;
+}
+
+header {
+    -webkit-background-size: auto auto !important;
+    -moz-background-size:  auto auto !important;
+    -ms-background-size:  auto auto !important;
+    -o-background-size:  auto auto !important;
+    background-size:  auto auto !important;
+}
+
+#bookingForm {
+    margin-right: 0;
+}
+
+.tmRadio p {
+   padding-left: 0;
+   padding-top: 10px;
+}
+
+.tmRadio {
+    margin-left: 0 !important;
+}
+
+.tmRadio strong {
+    margin-left: 0;
+}
+
+#bookingForm > strong + .controlHolder {
+    width: 280px;
+}
+
+.camera_prev {
+    margin-left: 0;
+    left: 20px;
+    bottom: 60px;
+    top: auto;
+    margin-top: 0;
+}
+
+.camera_next  {
+    margin-right: 0;
+    right: 20px;
+    bottom: 60px;
+    top: auto;
+    margin-top: 0;
+}
+
+
+.banner img {
+    width: 100%;
+}
+
+
+.banner {
+    margin-bottom: 25px;
+}
+
+.block1 {
+    margin-bottom: 30px;
+}
+
+.map address +address {
+    margin-left: 0;
+    float: none;
+    margin-top: 20px;
+}
+
+.socials {
+    float: none;
+    overflow: hidden;
+}
+
+.copy {
+    float: none;
+    padding-top: 40px;
+}
+
+header h1 {
+	display: block;
+	width: auto;
+    position: relative;
+	height: auto;
+    margin-bottom: 20px;
+}
+
+.img_inner {
+    width: 100% !important;
+    float: none !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+h1 a {
+	max-width: 90%;
+}
+
+.img_inner img {
+	width: 100%;
+}
+
+header h1 {
+    float: none;
+    text-align: center;
+}
+
+header h1 a {
+ 	width: auto;
+ 	display: inline-block;
+    height: auto;
+}
+
+
+ .map {
+ 	padding-right: 0px !important;
+ }
+
+ .map figure iframe {
+ width: 100%;
+ height: 300px;
+}
+ .map address {
+ 	margin-right: 0;
+}
+
+.noresize {
+ width: auto !important;
+ float: left !important;
+ margin-right: 20px !important;
+ margin-top: 4px !important;
+}
+
+ .img_inner {
+ margin-top: 30px;
+}
+
+.map address {
+    float: none;
+}
+
+.ui-datepicker {
+    width: 280px;
+}
+
+}
+
+@media only screen and (max-width: 479px) {
+ body {
+ min-width: 300px;
+}
+
+#bookingForm > strong + .controlHolder {
+    width: 210px;
+}
+
+.ui-datepicker {
+    left: 50% !important;
+    margin-left: -140px;
+}
+
+}
+
 </style>
 {%endblock%}
