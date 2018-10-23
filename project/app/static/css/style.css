@@ -265,7 +265,7 @@ header h1 a {
     height: 122px;
 	font-size: 0;
 	line-height: 0;
-	
+
 	text-indent: -999px;
 	transition: 0s ease;
 	-o-transition: 0s ease;
@@ -511,7 +511,7 @@ a.gal:hover img {
     overflow: hidden;
     position: relative;
 }
- 
+
 
 .map figure {
     padding: 27px 0 10px;
@@ -691,7 +691,7 @@ footer {
 
 .camera_prev {
     margin-left: -374px;
-} 
+}
 
 .camera_next  {
     margin-right: -374px;
@@ -746,7 +746,7 @@ header {
     bottom: 60px;
     top: auto;
     margin-top: 0;
-} 
+}
 
 .camera_next  {
     margin-right: 0;
@@ -764,7 +764,7 @@ header {
 
 .banner {
     margin-bottom: 25px;
-} 
+}
 
 .block1 {
     margin-bottom: 30px;
