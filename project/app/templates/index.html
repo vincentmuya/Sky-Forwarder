@@ -1,29 +1,68 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-      <body class="" id="top">
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="{% static 'images/favicon.ico' %}">
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+		<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+		<link rel="stylesheet" href="{% static 'css/camera.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+		<script src="{% static 'js/script.js' %}"></script>
+		<script src="{% static 'js/superfish.js' %}"></script>
+		<script src="{% static 'js/jquery.ui.totop.js' %}"></script>
+		<script src="{% static 'js/jquery.equalheights.js' %}"></script>
+		<script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+		<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+		<script src="{% static 'js/owl.carousel.js' %}"></script>
+		<script src="{% static 'js/camera.js' %}"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<!--<![endif]-->
+		<script src="booking/js/booking.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+		</script>
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+			<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+	<body class="page1" id="top">
 		<div class="main">
 <!--==============================header=================================-->
 			<header>
-        <!-- <form class="navbar-form" role="search" action="{% url 'search_results' %}">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
-              <div class="input-group-btn">
-                <button class="btn btn-primary" >Search</button>
-              </div>
-            </div>
-          </form> -->
-				<div class="menu_block">
+				<div class="menu_block ">
 					<div class="container_12">
 						<div class="grid_12">
 							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 								<ul class="sf-menu">
-									<li><a href="index.html">Home</a></li>
-									<li class="current"><a href="index-1.html">About</a></li>
+									<li class="current"><a href="index.html">Home</a></li>
+									<li><a href="index-1.html">About</a></li>
 									<li><a href="index-2.html">Cars</a></li>
 									<li><a href="index-3.html">Services</a></li>
 									<li><a href="index-4.html">Contacts</a></li>
@@ -38,83 +77,147 @@
 					<div class="grid_12">
 						<h1>
 							<a href="index.html">
-								<img src="images/logo.png" alt="Your Happy Family">
+								<img src="{% static 'images/logo.png' %}" alt="Your Happy Family">
 							</a>
 						</h1>
 					</div>
 				</div>
 				<div class="clear"></div>
 			</header>
+			<div class="slider_wrapper ">
+				<div id="camera_wrap" class="">
+					<div data-src="images/slide.jpg" ></div>
+					<div data-src="images/slide1.jpg" ></div>
+					<div data-src="images/slide2.jpg"></div>
+				</div>
+			</div>
+			<div class="container_12">
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon1.png" alt="">
+								<div class="extra_wrapper">Fast&amp;
+									<div class="color1">Safe</div>
+								</div>
+							</div>
+							Dorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon2.png" alt="">
+								<div class="extra_wrapper">Best
+									<div class="color1">Prices</div>
+								</div>
+							</div>
+							Hem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuader
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon3.png" alt="">
+								<div class="extra_wrapper">Package
+									<div class="color1">Delivery</div>
+								</div>
+							</div>
+							Kurem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuki
+							<a href="#" class="fa fa-share-square"></a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="c_phone">
+				<div class="container_12">
+					<div class="grid_12">
+						<div class="fa fa-phone"></div>+ 1800 559 6580
+						<span>ORDER NOW!</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
 <!--==============================Content=================================-->
 			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
 				<div class="container_12">
-					<div class="grid_7">
-						<h3>A Few Words About Us</h3>
-						<img src="images/page2_img1.jpg" alt="" class="img_inner fleft">
-						<div class="extra_wrapper">
-							<div class="text1 color2">
-								<a href="#">Lorem ipsum dolor sit amet, consecteturpiscinger elit. </a>
+					<div class="grid_5">
+						<h3>Booking Form</h3>
+						<form id="bookingForm">
+							<div class="fl1">
+								<div class="tmInput">
+									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+								</div>
+								<div class="tmInput">
+									<input name="From" placeHolder="From:" type="text" data-constraints="@NotEmpty @Required ">
+								</div>
 							</div>
-							<p>Want to know more about the free theme produced by TemplateMonster? Click this <span class="color1"><a href="http://blog.templatemonster.com/free-website-templates/" rel="dofollow">link</a></span>.</p>
-							One theme is not enough for you to make a choice? Browse the vast variety of <span class="color1"><a href="http://www.templatemonster.com/properties/topic/society-people/" rel="nofollow">car templates</a></span> at TemplateMonster’s website.
-						</div>
-						<div class="clear cl1"></div>
-						<p>Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio ut veliter loki molo. Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum atermolok commodo luctus erito libero.</p>
-						Praesent faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequatertolomon.
-						Curabitur vel lorem sit amet nulla ullamcorper fermentum.
+							<div class="fl1">
+								<div class="tmInput">
+									<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+								</div>
+								<div class="tmInput mr0">
+									<input name="To" placeHolder="To:" type="text" data-constraints="@NotEmpty @Required">
+								</div>
+							</div>
+							<div class="clear"></div>
+							<strong>Time</strong>
+							<div class="tmInput">
+								<input name="Time" placeHolder="" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+							<div class="clear"></div>
+							<strong>Date</strong>
+							<label class="tmDatepicker">
+								<input type="text" name="Date"	placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+							</label>
+							<div class="clear"></div>
+							<div class="tmRadio">
+								<p>Comfort</p>
+								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+								<span>Cheap</span>
+								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Standart</span>
+								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Lux</span>
+							</div>
+							<div class="clear"></div>
+							<div class="fl1 fl2">
+								<em>Adults</em>
+								<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>1</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<div class="clear height1"></div>
+							</div>
+							<div class="fl1 fl2">
+								<em>Children</em>
+								<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>0</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+							<div class="clear"></div>
+							<div class="tmTextarea">
+								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+							</div>
+							<a href="#" class="btn" data-type="submit">Submit</a>
+						</form>
 					</div>
-					<div class="grid_4 prefix_1">
-						<h3>Why Choose Us</h3>
-						<ul class="list li">
-							<li class="list_count">1</li>
-							<li class="extra_wrapper">
-								<div class="text1 color2"><a href="#">Econsecteturpiscinger elit</a></div>
-								Sit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio ut
-							</li>
-						</ul>
-						<ul class="list li">
-							<li class="list_count">2</li>
-							<li class="extra_wrapper">
-								<div class="text1 color2"><a href="#">Fconsecteturpiscingerelite</a></div>
-								Git meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibh odio
-							</li>
-						</ul>
-						<ul class="list li">
-							<li class="list_count">3</li>
-							<li class="extra_wrapper">
-								<div class="text1 color2"><a href="#">Hconsecteturpiscingeliter</a></div>
-								Hit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuad nibut velit.
-							</li>
-						</ul>
-						<ul class="list li">
-							<li class="list_count">4</li>
-							<li class="extra_wrapper">
-								<div class="text1 color2"><a href="#">Mconsecteturpiscinr elitwert</a></div>
-								Kit meter ultricies erat rutrum. Cras er te facilisis, nulla vel viver auctor, leo magna sodales felis, quis malesuabh odio uter
-							</li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-					<div class="grid_12">
-						<h3 class="h3__ind1">Testimonials</h3>
-					</div>
-					<div class="grid_4">
-						<blockquote class="bq1">
-							<p><i>Lorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magna... </i></p>
-							<div class="color2">Tim Barkley</div>
-						</blockquote>
-					</div>
-					<div class="grid_4">
-						<blockquote class="bq1">
-							<p><i>Dorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctor, leo magwe... </i></p>
-							<div class="color2">Linda Grey</div>
-						</blockquote>
-					</div>
-					<div class="grid_4">
-						<blockquote class="bq1">
-							<p><i>Gorem ipsum dolor sit amet, consectetur adipiscinger elit. In mollis erat mattis neque facilisis, sit ameter ultricies erat rutrum. Cras facilisis, nulla vel viver auctoro magndales...</i></p>
-							<div class="color2">Ann Pool</div>
-						</blockquote>
+					<div class="grid_6 prefix_1">
+						<a href="index2.html" class="type"><img src="images/page1_img1.jpg" alt=""><span class="type_caption">Economy</span></a>
+						<a href="index2.html" class="type"><img src="images/page1_img2.jpg" alt=""><span class="type_caption">Standard</span></a>
+						<a href="index2.html" class="type"><img src="images/page1_img3.jpg" alt=""><span class="type_caption">Lux</span></a>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -139,880 +242,16 @@
 				<div class="clear"></div>
 			</div>
 		</footer>
+		<script>
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
+			});
+		</script>
 	</body>
 </html>
-<style media="screen">
-@import "reset.css";
-@import "grid.css";
-@import "font-awesome.css";
-@import "superfish.css";
-
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:300);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:600);
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400italic);
-@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400);
-@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:700);
-@import url(//fonts.googleapis.com/css?family=Marvel:400);
-@import url(//fonts.googleapis.com/css?family=Marvel:700);
-
-html {
-	width: 100%;
-
-}
-a[href^="tel:"] {
- color: inherit;
- text-decoration: none;
-}
-
-* {
-	-webkit-text-size-adjust: none;
-}
-
-body {
-	position: relative;
-    background-color: #4a4a4a;
-    color: #878787;
-    font: 14px/20px 'Open Sans', sans-serif;
-}
-
-.ic {
-	border:0;
-	float:right;
-	background:#fff;
-	color:#f00;
-	width:50%;
-	line-height:10px;
-	font-size:10px;
-	margin:-220% 0 0 0;
-	overflow:hidden;
-	padding:0
-}
-
-strong {
-	font-weight: 700;
-}
-
-address {
-	font-style: normal;
-}
-
-p {
-	margin-bottom: 20px;
-}
-
-input {
-	border-radius: 0 !important;
-	outline: none !important;
-}
-
-
-img {
-	max-width: 100%;
-}
-
-
-
-/****Heads****/
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-	color: #3e454c;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-h3 {
-    font-size: 36px;
-    line-height: 36px;
-    color: #313030;
-    padding-top: 14px;
-    margin-bottom: 20px;
-}
-
-.page1 h3 {
-    margin-bottom: 46px;
-    padding-top: 82px;
-}
-
-.h3__ind1 {
-    padding-top: 76px;
-    margin-bottom: 39px;
-}
-
-/****Lists****/
-
-
-ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.list {
-}
-
-.list li {
-    overflow: hidden;
-}
-
-.list_count {
-    float: left;
-    text-align: center;
-    color: #fff;
-    width: 45px;
-    height: 45px;
-    margin-top: 4px;
-    margin-right: 13px;
-    background-color: #fdc903;
-    font: 36px/44px 'Roboto Condensed', sans-serif;
-}
-
-.list li .text1 {
-    margin-bottom: 3px;
-}
-
-.list li+li {
-    margin-top: 19px;
-}
-
-
-/****Links****/
-
-
-a {
-	text-decoration: none;
-	color: inherit;
-	outline: none;
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-}
-
-a:hover {
-	color: #fdc903;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #fdc903;
-    color: #fff;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 10px 26px 8px 25px;
-}
-
-.btn:hover {
-    background-color: #585757;
-}
-
-#bookingForm .btn {
-    margin-top: 13px !important;
-}
-
-/****classes****/
-
-.mb0 {
-	margin-bottom: 0px !important;
-}
-.m0 {
-	margin: 0 !important;
-}
-.pad0 {
-	padding: 0 !important;
-}
-
-.pad1 {
-}
-
-
-.img_inner {
-	max-width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-	margin-bottom: 17px;
-	margin-top: 7px;
-}
-
-
-.fleft {
-	float: left;
-	width: auto !important;
-	margin-right: 32px;
-	margin-bottom: 0px;
-	margin-top: 4px;
-}
-
-.page1 .fleft {
-    margin-top: 5px;
-}
-
-.page1 .fleft {
-    margin-right: 16px;
-}
-
-.oh {
-	overflow: hidden;
-}
-.fright {
-	float: right !important;
-}
-.upp {
-	text-transform: uppercase;
-}
-
-.alright {
-	text-align: right;
-}
-.center {
-	text-align: center;
-}
-.wrapper, .extra_wrapper {
-	overflow: hidden;
-}
-.clear {
-	float: none !important;
-	clear: both;
-}
-
-.nowrap {
-    white-space: nowrap;
-}
-/*header*/
-
-.main {
-    background-color: #fff;
-}
-
-header {
-	display: block;
-}
-
-
-header h1 {
-	position: relative;
-	text-align: center;
-    padding-top: 55px;
-}
-
-.page1 header h1 {
-    margin-bottom: 20px;
-}
-
-
-header h1 a {
-	display: inline-block;
-	overflow: hidden;
-	width: 251px;
-    height: 122px;
-	font-size: 0;
-	line-height: 0;
-
-	text-indent: -999px;
-	transition: 0s ease;
-	-o-transition: 0s ease;
-	-webkit-transition: 0s ease;
-}
-header h1 a img {
-	display: block;
-}
-
-.banner {
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #e5e5e7;
-    margin: 55px 0 87px;
-    overflow: hidden;
-    position: relative;
-    padding: 0 30px 24px 40px;
-}
-
-
-.banner_title {
-    overflow: hidden;
-    padding-top: 19px;
-    color: #2a2929;
-    font-size: 46px;
-    line-height: 48px;
-    margin-bottom: 9px;
-}
-
-.banner img {
-    position: relative;
-    top: -1px;
-    float: left;
-    margin-right: 17px;
-}
-
-.banner a {
-    font-size: 30px;
-    float: right;
-    position: relative;
-    margin-top: -10px;
-    color: #959596;
-}
-
-.banner a:hover {
-    color: #6b6b6c;
-}
-
-.c_phone {
-    font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
-    padding: 62px 0 61px;
-    text-align: center;
-    font-size: 65px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: #fdc903;
-}
-
-.c_phone span {
-    padding-top: 30px;
-    padding-left: 45px;
-    font-size: 50px;
-    display: block;
-}
-
-.c_phone .fa {
-    font-size: 48px;
-    line-height: 48px;
-    margin-right: 10px;
-    position: relative;
-    top: -9px;
-}
-
-.c_phone>div>div {
-    position: relative;
-}
-
-.c_phone>div>div:after {
-    position: absolute;
-    background: url(../images/tax_bg.png) 0 0 no-repeat;
-    width: 183px;
-    height: 53px;
-    content: '';
-    left: 0;
-    top: 50%;
-    margin-top: -31px;
-}
-
-.c_phone>div>div:before {
-    position: absolute;
-    background: url(../images/tax_bg.png) 0 0 no-repeat;
-    width: 183px;
-    height: 53px;
-    content: '';
-    right: 0;
-    top: 50%;
-    margin-top: -31px;
-}
-
-/**Content**/
-
-.content {
-    padding-bottom: 113px;
-}
-.page1  .content {
-    padding-bottom: 82px;
-}
-
-.type {
-    border: 1px solid #ebeaea;
-    position: relative;
-    margin-top: 84px;
-    display: block;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.type_caption {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 312px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    background: url(../images/capt_bg.png) 0 0 repeat;
-    color: #fff;
-    font-size: bold;
-    font-size: 30px;
-    line-height: 30px;
-    padding: 7px 30px 8px;
-    transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease;
-}
-
-.type:hover .type_caption {
-    width: 100%;
-}
-
-.type+.type {
-    margin-top: 11px;
-}
-
-.type+.type+.type {
-    margin-top: 10px;
-}
-
-.text1 {
-    margin-bottom: 23px;
-    font-size: 20px;
-    line-height: 20px;
-}
-
-.cl1 {
-    height: 24px;
-}
-
-.bq1 {
-    padding: 61px 38px 26px 46px;
-    background: url(../images/quotes.png) 31px 33px no-repeat #e5e5e7;
-}
-
-.bq1 .color2 {
-    color: #727171;
-    text-align: right;
-    font: 18px/20px 'Roboto Condensed', sans-serif;
-}
-
-.bq1:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    bottom: -27px;
-    left: 67px;
-    border-style: solid;
-    border-width: 27px 0 0 40px;
-    border-color: #cfcfd0 transparent transparent transparent;
-}
-
-.gallery {
-    overflow: hidden;
-    padding-top: 27px;
-}
-
-a.gal {
-    background: url(../images/magnifier.png) center center no-repeat #fdc903;
-    margin-right: 1px;
-    margin-bottom: 27px;
-    display: block;
-    border: 1px solid #ebeaea;
-    border-right-width: 2px;
-}
-
-a.gal img {
-    width: 100%;
-    transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease;
-    box-shadow: 0 0 0 #fff;
-}
-
-a.gal:hover img {
-    opacity: 0.2;
-}
-
-.box {
-    margin-bottom: 23px;
-    margin-top: 4px;
-    background-color: #e5e5e7;
-    padding: 23px 22px 28px;
-}
-
-.box img {
-    margin-bottom: 25px;
-}
-
-.box a.btn {
-    padding-left: 13px;
-    padding-right: 13px;
-    margin-top: 23px;
-}
-
-/**Map**/
-
-.color1 {
-    color: #fdc903;
-}
-
-.color1 a:hover , a.color1:hover {
-    color: #4a4a4a;
-}
-
-.color2 {
-    color: #4a4a4a;
-}
-
-.map {
-    overflow: hidden;
-    position: relative;
-}
-
-
-.map figure {
-    padding: 27px 0 10px;
-    position: relative;
-	display: block;
-	width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.map figure iframe {
-	width: 100%;
-	height: 399px;
-	max-width: 100%;
-}
-.map address {
-	display: block;
-}
-
-.map .text1 {
-    padding-top: 8px;
-}
-
-.map address dt {
-}
-
- address dd span {
-	display: inline-block;
-	text-align: left;
-}
-
-
-
-/**Footer**/
-
-footer {
-	display: block;
-    padding: 0px 0 60px;
-    font-size: 14px;
-    color: #aaa;
-    line-height: 18px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.copy {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.st1 {
-    padding-top: 80px;
-    color: #e2e2e2;
-    margin-bottom: 8px;
-}
-
-.brand {
-    position: relative;
-    top: -7px;
-    font: 30px/18px 'Roboto Condensed', sans-serif;
-    display: inline-block;
-    font-size: 30px;
-}
-
-.f_phone {
-    padding-top: 72px;
-    font-size: 40px;
-    line-height: 36px;
-    float: right;
-    color: #e2e2e2;
-}
-
-.f_phone  span {
-    position: relative;
-    top: 4px;
-    font-size: 30px;
-}
-
-.socials {
-    margin-right: 96px;
-    padding-top: 82px;
-    float: right;
-    overflow: hidden;
-}
-
-.socials a {
-    display: block;
-    float: left;
-    margin: 0 6px 0 7px;
-    color: #fff;
-    text-align: center;
-    background-color: #fdc903;
-    border-radius: 500px;
-    width: 58px;
-    height: 58px;
-    font-size: 24px;
-    line-height: 58px;
-}
-
-.socials a:hover {
-    color: #fdc903;
-    background-color: #585757;
-}
-
-#toTop {
-    display: none;
-    text-decoration: none;
-    position: fixed;
-    bottom: 40px;
-    left: 51%;
-    margin-left: 610px;
-    overflow: hidden;
-    width: 61px;
-    height: 75px;
-    border: none;
-    text-indent: -999px;
-    z-index: 20;
-    background: url(../images/totop.png) no-repeat left 0;
-    transition: 0s ease;
-    -o-transition: 0s ease;
-    -webkit-transition: 0s ease;
-}
-#toTop:hover {
-    outline: none;
-    background-position: right 0;
-}
-
-/*==================================RESPONSIVE LAYOUTS===============================================*/
-
-
-@media only screen and (max-width: 995px) {
- body {
- min-width: 768px;
-}
-
-
-.fl1 {
-    float: none;
-    margin-left: 0 !important;
-    width: auto;
-}
-
- .map figure,  .map figure iframe,  #form input,  #form textarea,  #form .success {
- width: 100% !important;
- float: none !important;
-}
- #form .success {
- -moz-box-sizing: border-box;
- -webkit-box-sizing: border-box;
- -o-box-sizing: border-box;
- box-sizing: border-box;
-}
- .map figure {
- height: auto !important;
-}
- .extra_wrapper {
- overflow: visible;
-}
-
-.map figure {
-	margin-bottom: 15px;
-}
-
-.nowrap {
-    white-space: normal;
-}
-
-
-.caption .price {
-    display: none;
-}
-
-.caption {
-    padding-top: 20px;
-}
-
-
-.camera_prev {
-    margin-left: -374px;
-}
-
-.camera_next  {
-    margin-right: -374px;
-}
-
-.fl1.fl2 {
-    clear: both;
-}
-
-
-
-}
-
-
-@media only screen and (max-width: 767px) {
-body {
-    min-width: 420px;
-}
-
-header {
-    -webkit-background-size: auto auto !important;
-    -moz-background-size:  auto auto !important;
-    -ms-background-size:  auto auto !important;
-    -o-background-size:  auto auto !important;
-    background-size:  auto auto !important;
-}
-
-#bookingForm {
-    margin-right: 0;
-}
-
-.tmRadio p {
-   padding-left: 0;
-   padding-top: 10px;
-}
-
-.tmRadio {
-    margin-left: 0 !important;
-}
-
-.tmRadio strong {
-    margin-left: 0;
-}
-
-#bookingForm > strong + .controlHolder {
-    width: 280px;
-}
-
-.camera_prev {
-    margin-left: 0;
-    left: 20px;
-    bottom: 60px;
-    top: auto;
-    margin-top: 0;
-}
-
-.camera_next  {
-    margin-right: 0;
-    right: 20px;
-    bottom: 60px;
-    top: auto;
-    margin-top: 0;
-}
-
-
-.banner img {
-    width: 100%;
-}
-
-
-.banner {
-    margin-bottom: 25px;
-}
-
-.block1 {
-    margin-bottom: 30px;
-}
-
-.map address +address {
-    margin-left: 0;
-    float: none;
-    margin-top: 20px;
-}
-
-.socials {
-    float: none;
-    overflow: hidden;
-}
-
-.copy {
-    float: none;
-    padding-top: 40px;
-}
-
-header h1 {
-	display: block;
-	width: auto;
-    position: relative;
-	height: auto;
-    margin-bottom: 20px;
-}
-
-.img_inner {
-    width: 100% !important;
-    float: none !important;
-    margin-right: 0 !important;
-    margin-bottom: 20px !important;
-}
-
-h1 a {
-	max-width: 90%;
-}
-
-.img_inner img {
-	width: 100%;
-}
-
-header h1 {
-    float: none;
-    text-align: center;
-}
-
-header h1 a {
- 	width: auto;
- 	display: inline-block;
-    height: auto;
-}
-
-
- .map {
- 	padding-right: 0px !important;
- }
-
- .map figure iframe {
- width: 100%;
- height: 300px;
-}
- .map address {
- 	margin-right: 0;
-}
-
-.noresize {
- width: auto !important;
- float: left !important;
- margin-right: 20px !important;
- margin-top: 4px !important;
-}
-
- .img_inner {
- margin-top: 30px;
-}
-
-.map address {
-    float: none;
-}
-
-.ui-datepicker {
-    width: 280px;
-}
-
-}
-
-@media only screen and (max-width: 479px) {
- body {
- min-width: 300px;
-}
-
-#bookingForm > strong + .controlHolder {
-    width: 210px;
-}
-
-.ui-datepicker {
-    left: 50% !important;
-    margin-left: -140px;
-}
-
-}
-
-</style>
 {%endblock%}
