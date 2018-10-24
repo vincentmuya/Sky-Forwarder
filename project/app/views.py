@@ -2,11 +2,13 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .forms import NewNewFormForm
 from .models import NewForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
 
+@login_required(login_url='/accounts/login/')
 def new_cargo(request):
     current_user = request.user
     if request.method == 'POST':
@@ -31,6 +33,7 @@ def search_results(request):
         message = "You haven't searched for any term"
         return render(request, 'search.html',{"message":message})
 
+@login_required(login_url='/accounts/login/')
 def cargo_list(request):
     scoty = NewForm.objects.all()
     print(scoty)
