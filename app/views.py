@@ -8,6 +8,9 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'index.html')
 
+def track_cargo(request):
+    return render(request, 'track.html')
+
 @login_required(login_url='/accounts/login/')
 def new_cargo(request):
     current_user = request.user
