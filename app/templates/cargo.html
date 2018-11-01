@@ -62,8 +62,8 @@
               <li><a href="#">About</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Contacts</a></li>
-              <li><a href="{%url 'track-cargo'%}">Track cargo</a></li>
               <li><a href="{% url 'new-cargo'%}">Add Cargo</a></li>
+              <li><a href="/logout">Logout</a></li>
               <li></li>
             </ul>
           </nav>
@@ -144,15 +144,8 @@
     <style media="screen">
     body{
       background-color: white;
+      color: black;
     }
-    .top-right {
-        position: absolute;
-        top: 50px;
-        right: 16px;
-        font-size: 25px;
-        color: white;
-        list-style-type: none;
-      }
       footer{
         background-color: #4a4a4a;
       }

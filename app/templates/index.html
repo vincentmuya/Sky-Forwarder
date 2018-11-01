@@ -69,27 +69,6 @@
 									<li><a href="{% url 'cargo'%}">Agent Login</a></li>
 									<li></li>
 								</ul>
-								<div class="top-right">
-								<br>
-							{% if user.is_authenticated %}
-							<ul>
-										<li>
-											<a href="{%url 'new-cargo'%}">Add cargo</a>
-										</li>
-										<li>
-											<a href="{%url 'cargo'%}">Cargo List</a>
-										</li>
-										<li>
-											<a href="/logout">Logout</a>
-										</li>
-							</ul>
-							{% else %}
-							<li>
-								<a class='btn btn-default' href="/accounts/login">Login</a>
-							</li>
-
-							{% endif %}
-						</div>
 							</nav>
 							<div class="clear"></div>
 						</div>

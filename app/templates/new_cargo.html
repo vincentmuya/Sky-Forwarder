@@ -64,32 +64,10 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contacts</a></li>
-                <li><form class="navbar-form" role="search" action="{% url 'search_results' %}">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
-            <div class="input-group-btn">
-              <button class="btn btn-primary" >Search</button>
-            </div>
-          </div></form></li>
+                <li><a href="{%url 'track-cargo'%}">Track cargo</a></li>
+                <li><a href="{% url 'cargo'%}">Agent Login</a></li>
+                <li></li>
               </ul>
-              <div class="top-right">
-              <br>
-            {% if user.is_authenticated %}
-            <ul>
-                  <li>
-                    <a href="{%url 'cargo'%}">Cargo List</a>
-                  </li>
-                  <li>
-                    <a href="/logout">Logout</a>
-                  </li>
-            </ul>
-            {% else %}
-            <li>
-              <a class='btn btn-default' href="/accounts/login">Login</a>
-            </li>
-
-            {% endif %}
-          </div>
             </nav>
             <div class="clear"></div>
           </div>
@@ -111,13 +89,9 @@
 </body>
 </html>
 <style media="screen">
-.top-right {
-		position: absolute;
-		top: 50px;
-		right: 16px;
-		font-size: 25px;
-		color: white;
-		list-style-type: none;
-	}
+body{
+  background-color: white;
+  color: black;
+}
 </style>
 {% endblock %}
