@@ -158,12 +158,12 @@ a {
 }
 
 a:hover {
-	color: #fdc903;
+	color: #f39c12;
 }
 
 .btn {
     display: inline-block;
-    background-color: #fdc903;
+    background-color: #f39c12;
     color: #fff;
     font-size: 14px;
     line-height: 20px;

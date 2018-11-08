@@ -21,5 +21,5 @@ class NewForm(models.Model):
 
     @classmethod
     def search_by_referenceID(cls,search_term):
-        results = cls.objects.filter(referenceID__icontains=search_term)
+        search_result = cls.objects.filter(referenceID__icontains=search_term)
         return results
