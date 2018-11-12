@@ -28,28 +28,7 @@
 	</head>
 	<body class="page1" id="top">
 		<div class="main">
-<!--==============================header=================================-->
-			<header >
-				<div class="menu_block ">
-					<div class="container_12">
-						<div class="grid_12">
-							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
-								<ul class="sf-menu">
-									<li class="current"><a href="{%url 'index'%}">Home</a></li>
-									<li><a href="#">About</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="{%url 'track-cargo'%}">Track cargo</a></li>
-									<li><a href="{% url 'cargo'%}">Agent Login</a></li>
-									<li></li>
-								</ul>
-							</nav>
-							<div class="clear"></div>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</header>
+			{%include 'navbar.html'%}
 			<div class="slider_wrapper ">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
      <!-- Indicators -->
