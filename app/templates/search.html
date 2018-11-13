@@ -18,16 +18,20 @@
   </div> -->
 
   <!-- <div class="row"> -->
-
+<div class="resul">
+  <h2>Track Result</h2>
+</div>
   {% if referenceID %}
     {% for result in referenceID%}
 <div class="card" style="width: 120rem;">
   <div class="card-body">
     <h5 class="card-title">
-      <h4><strong>ReferenceID</strong>:{{result.RecieverAddress}} </h4> </h5>
+      <div class="refid">
+            <img src="https://help.shopify.com/assets/manual/sell-in-person/hardware/barcode-scanner/2d-barcode-575669a49194cf6f6cf1f226833efd6cd4201465e22d128e88fbd81267f6d463.png" alt="" width="50px;" height="50px;">
+            <h4><strong>ReferenceID</strong>:{{result.RecieverAddress}} </h4> </h5>
+          </div>
+      </div>
       <div class="row">
-    <p class="card-text">
-    </p>
       <div class="sen_reciv" >
           <div class="col-md-6">
       <h1><strong>Sender: </strong>{{result.SenderName}}</h1>
@@ -64,7 +68,12 @@
   {% endif %}
   </div>
 </body>
+{%include 'footer.html'%}
 <style media="screen">
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 body{
   padding-top: 5%;
   background-color: white;
@@ -72,6 +81,9 @@ body{
 }
 h1, h3{
   font-size: 20px;
+}
+h2{
+  text-align: center;
 }
 </style>
 {% endblock %}
