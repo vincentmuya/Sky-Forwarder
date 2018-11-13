@@ -24,60 +24,19 @@
   <script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
   <!--<![endif]-->
   <script src="{% static 'booking/js/booking.js' %}"></script>
-  <script>
-    $(document).ready(function(){
-      jQuery('#camera_wrap').camera({
-        loader: false,
-        pagination: false ,
-        minHeight: '444',
-        thumbnails: false,
-        height: '28.28125%',
-        caption: true,
-        navigation: true,
-        fx: 'mosaic'
-      });
-      $().UItoTop({ easingType: 'easeOutQuart' });
-    });
-  </script>
-  <!--[if lt IE 8]>
-    <div style=' clear: both; text-align:center; position: relative;'>
-      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-        <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-      </a>
-    </div>
-    <![endif]-->
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <link rel="stylesheet" media="screen" href="css/ie.css">
-  <![endif]-->
 </head>
 <body>
-  <header >
-    <div class="menu_block ">
-      <div class="container_12">
-        <div class="grid_12">
-          <nav class="horizontal-nav full-width horizontalNav-notprocessed">
-            <ul class="sf-menu">
-              <li class="current"><a href="{%url 'index'%}">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="{% url 'new-cargo'%}">Add Cargo</a></li>
-              <li><a href="/logout">Logout</a></li>
-              <li></li>
-            </ul>
-          </nav>
-          <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </header>
+{%include 'navbar.html'%}
 <br>
 <br>
-
-<a href="https://freightcargo.herokuapp.com/admin/app/newform/"><button type="button" name="button" class="btn btn-secondary">Edit/Update Cargo</button></a>
-<!-- Looping through cargo   -->
+<div class="row">
+  <div class="col-md-2">
+    <a href="https://freightcargo.herokuapp.com/admin/app/newform/"><button type="button" name="button" class="btn btn-secondary">Edit/Update Cargo</button></a>
+  </div>
+  <div class="col-md-4">
+<a href="{%url 'new-cargo'%}"><button type="button" name="button" class="btn btn-secondary">Add Cargo</button></a>
+  </div>
+</div>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -96,6 +55,7 @@
             <th scope="col">Status</th>
           </tr>
         </thead>
+        <!-- Looping through cargo   -->
         {%  for cargos_item in scoty %}
         <tbody>
           <tr>
@@ -142,6 +102,7 @@
     		</footer>
     <style media="screen">
     body{
+      padding-top: 4%;
       background-color: white;
       color: black;
     }
