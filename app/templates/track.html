@@ -52,27 +52,7 @@
   <![endif]-->
 </head>
 <body>
-  <header >
-    <div class="menu_block ">
-      <div class="container_12">
-        <div class="grid_12">
-          <nav class="horizontal-nav full-width horizontalNav-notprocessed">
-            <ul class="sf-menu">
-              <li class="current"><a href="{%url 'index'%}">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="{%url 'track-cargo'%}">Track cargo</a></li>
-              <li><a href="{% url 'cargo'%}">Agent Login</a></li>
-              <li></li>
-            </ul>
-          </nav>
-          <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </header>
+  {%include 'navbar.html'%}
   <br>
   <br>
   <div class="container">
@@ -112,6 +92,8 @@
 <!-- </body> -->
 <style media="screen">
   body{
+    padding-top: 5%;
+    height: 100%;
     background-color: white;
   }
   footer{
