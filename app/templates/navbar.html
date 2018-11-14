@@ -26,9 +26,9 @@
   <span class="icon icon-bars"></span>
   <span class="icon icon-bars overlay"></span>
 </div> -->
-<a href="#"><img class="mobile" src="{%static 'images/logo.png'%}" alt=""></a>
 <div id="menuToggle">
   <input type="checkbox" />
+  <br>
   <span></span>
   <span></span>
   <span></span>
@@ -39,8 +39,10 @@
     <a href="{%url 'track-cargo'%}"><li>Track cargo</li></a>
     <a href="{% url 'cargo'%}"><li>Agent Login</li></a>
     </ul>
+    <a href="#"><img id="mobile" class="mobile" src="{%static 'images/logo.png'%}" alt=""></a>
 </div>
 <style media="screen">
+
 #menuToggle{
   display: none;
 }
@@ -172,7 +174,7 @@ width: 100%;
 #navbar{
   display: none;
 }
-.mobile{
+#mobile{
   height: 60px;
   margin-left: 17%
 }
