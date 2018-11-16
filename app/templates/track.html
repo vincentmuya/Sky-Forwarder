@@ -15,10 +15,12 @@
   {%include 'navbar.html'%}
   <br>
   <br>
+  <br>
   <div class="container">
-
-    <h3>Track your Shipment</h3>
-    <h4>Enter your Reference ID</h4>
+  <div class="row">
+    <div class="col-md-8">
+    <h1>Track your Shipment</h1>
+    <h4>Enter your Reference ID:</h4>
     <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 <div class="input-group">
 <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
@@ -26,24 +28,51 @@
   <button class="btn btn-primary" >Search</button>
 </div>
 </div></form>
+</div>
+<br>
+<div class="col-md-4">
+  <div class="track-card" style="width: 28rem;">
+  <div class="tcard-body">
+    <h1 class="tcard-heading">Giving You peace of mind</h1>
+    <p class="tcard-content">Sky Fowerder international cargo shows the progress of your shipment every step of the way,across town or around the world With shipping locations around the globe,we make it easy and reliable in keeping track of your shipment.</p>
   </div>
+
+</div>
+</div>
+</div>
   <div class="trackBody">
   </div>
+</div>
   </body>
   {%include 'footer.html'%}
   <!--==============================footer=================================-->
 <!-- </body> -->
 <style media="screen">
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
   body{
-    padding-top: 5%;
     height: 100%;
     background-color: white;
-  }
-p{
+    background-image: url('{%static 'images/network.png'%}');
+     background-repeat: no-repeat;
+     background-size: cover;
+     color: white;
+      }
+.track-card{
+  background-color: white;
   color: black;
+  border-radius: 10px;
 }
+  h1{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 35px;
+  }
   .trackBody{
-    padding: 9%;
+    padding-top: 40%;
   }
 </style>
   {%endblock%}
