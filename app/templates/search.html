@@ -24,57 +24,87 @@
 
   <!-- <div class="row"> -->
 <div class="resul">
-  <h2>Track Result</h2>
+  <h1 class="shipment-result">Shipment Result</h1>
 </div>
   {% if referenceID %}
     {% for result in referenceID%}
-<div class="card" style="width: 120rem;">
-  <div class="card-body">
-    <h5 class="card-title">
-      <div class="refid">
-            <img src="https://help.shopify.com/assets/manual/sell-in-person/hardware/barcode-scanner/2d-barcode-575669a49194cf6f6cf1f226833efd6cd4201465e22d128e88fbd81267f6d463.png" alt="" width="50px;" height="50px;">
-            <h4><strong>ReferenceID</strong>:{{result.RecieverAddress}} </h4> </h5>
-          </div>
-      </div>
-      <div class="row">
-      <div class="sen_reciv" >
-          <div class="col-md-6">
-      <h1><strong>Sender: </strong>{{result.SenderName}}</h1>
+  <div class="panel panel-default">
+    <div class="panel-heading">ReferenceID: {{result.RecieverAddress}}</div>
+    <br>
+<div class="card" style="width: 71rem;">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="credentials">
+      <h1>Sender Name:</h1>
+      <p>{{result.SenderName}}</p>
       <hr>
-      <h3><strong>Sender Address: </strong>{{result.SenderAddress}}</h3>
-      <hr>
-      <h3><strong>Goods are From: </strong>{{result.GoodsareFrom}}</h3>
-      <hr>
-      <h3><strong>Depature Date: </strong>{{result.DepatureDate}}</h3>
-      <hr>
-      <h3><strong>Depature time: </strong>{{result.Depaturetime}}</h3>
-      <hr>
-  </div>
-  <div class="col-md-6">
-    <h1><strong>Reciever: </strong>{{result.RecieverName}}</h1>
-    <hr>
-    <h3><strong>Reciever Address: </strong>  {{result.RecieverAddress}}</h3>
-    <hr>
-    <h3><strong>Goods To: </strong>{{result.GoodsTo}}</h3>
-    <hr>
-    <h3><strong>Arrival Date: </strong>{{result.ArrivalDate}}</h3>
-    <hr>
-    <h3><strong>Arrival Time: </strong>{{result.ArrivalTime}}</h3>
-    <hr>
-  </div>
-  </div>
+      <h2><strong>SenderAddress:</strong> {{result.SenderAddress}}</h2>
+      <p></p>
     </div>
-    <h3><strong>Goods Description: </strong>{{result.GoodsDescription}}</h3>
+
+    </div>
+  <div class="col-md-6">
+    <div class="credentials">
+    <h1>Reciver Name:</h1>
+    <p>{{result.RecieverName}}</p>
     <hr>
-    <h3><strong>Status</strong>: {{result.Status}}</h3>
+    <h2><strong>SenderAddress:</strong> {{result.RecieverAddress}}</h2>
+    <p></p>
+    </div>
   </div>
-</div>
+  </div>
+  <br>
+  <table id="customers">
+  <tr>
+    <td><strong>Goods are From: </strong><br>{{result.GoodsareFrom}}</td>
+    <td><strong>Goods To: </strong><br>{{result.GoodsTo}}</td>
+  </tr>
+  <tr>
+    <td><strong>Depature Date: </strong><br>{{result.DepatureDate}}</td>
+    <td><strong>Arrival Date: </strong><br>{{result.ArrivalDate}}</td>
+  </tr>
+  <tr>
+    <td><strong>Depature time: </strong><br>{{result.Depaturetime}}</td>
+    <td><strong>Arrival Time: </strong><br>{{result.ArrivalTime}}</td>
+  </tr>
+  <tr>
+    <td><strong>Goods Description: </strong>{{result.GoodsDescription}}</td>
+  </tr>
+  <tr>
+    <td><strong>Status</strong>: {{result.Status}}</td>
+  </tr>
+  </table>
+
     {% endfor %}
   {% endif %}
   </div>
+  </div>
+  </div>
 </body>
-{%include 'footer.html'%}
+<!-- {%include 'footer.html'%} -->
 <style media="screen">
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+.credentials{
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.credentials h1{
+  font-size: 40px;
+}
 footer{
       background-color: #4a4a4a;
 }
@@ -87,12 +117,6 @@ body{
   background-color: white;
   color: black;
   max-width: 100%;
-}
-h1, h3{
-  font-size: 20px;
-}
-h2{
-  text-align: center;
 }
 </style>
 {% endblock %}
