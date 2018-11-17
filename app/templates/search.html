@@ -31,7 +31,7 @@
   <div class="panel panel-default">
     <div class="panel-heading">ReferenceID: {{result.RecieverAddress}}</div>
     <br>
-<div class="card" style="width: 71rem;">
+<div class="track-card" >
   <div class="row">
     <div class="col-md-6">
       <div class="credentials">
@@ -83,6 +83,9 @@
 </body>
 <!-- {%include 'footer.html'%} -->
 <style media="screen">
+.track-card{
+  width: 71rem;
+}
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -117,6 +120,11 @@ body{
   background-color: white;
   color: black;
   max-width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .track-card{
+    width: 21rem;
+  }
 }
 </style>
 {% endblock %}
