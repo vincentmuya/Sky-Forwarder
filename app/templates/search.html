@@ -29,7 +29,7 @@
   {% if referenceID %}
     {% for result in referenceID%}
   <div class="panel panel-default">
-    <div class="panel-heading">ReferenceID: {{result.RecieverAddress}}</div>
+    <div class="panel-heading"><strong>ReferenceID:</strong> {{result.referenceID}}   <img src="http://qrcode.kaywa.com/img.php?s=8&d=Certified%20Post%20Whore%21" class="qrcode" alt="Qr code"></div>
     <br>
 <div class="track-card" >
   <div class="row">
@@ -74,15 +74,46 @@
     <td><strong>Status</strong>: {{result.Status}}</td>
   </tr>
   </table>
+</div>
+</div>
+  <table id="customers">
+    <tr>
+  <th>Shipment Progress:</th>
+</tr>
+<tr>
+  <td>{{result.Update1}}</td>
+</tr>
+<tr>
+  <td>{{result.Update2}}</td>
+</tr>
+<tr>
+  <td>{{result.Update3}}</td>
+</tr>
+<tr>
+  <td>{{result.Update4}}</td>
+</tr>
+<tr>
+  <td>{{result.Update5}}</td>
+</tr>
+<tr>
+  <td>{{result.Update6}}</td>
+</tr>
+<tr>
+  <td></td>
+</tr>
+  </table>
 
     {% endfor %}
   {% endif %}
   </div>
-  </div>
-  </div>
 </body>
+{%include 'footer.html'%}
 <!-- {%include 'footer.html'%} -->
 <style media="screen">
+.qrcode{
+  width: 50px;
+  height: 50px;
+}
 .track-card{
   width: 71rem;
 }
@@ -100,7 +131,13 @@
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
 #customers tr:hover {background-color: #ddd;}
-
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
 .credentials{
   background-color: #f2f2f2;
   border-radius: 10px;

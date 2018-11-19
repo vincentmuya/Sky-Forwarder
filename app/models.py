@@ -15,6 +15,12 @@ class NewForm(models.Model):
     ArrivalTime=models.CharField(max_length = 250)
     GoodsDescription=models.TextField(max_length = 1000)
     Status=models.TextField(max_length = 5000)
+    Update1=models.TextField(max_length= 5000, blank=True)
+    Update2=models.TextField(max_length= 5000, blank=True)
+    Update3=models.TextField(max_length= 5000, blank=True)
+    Update4=models.TextField(max_length= 5000, blank=True)
+    Update5=models.TextField(max_length= 5000, blank=True)
+    Update6=models.TextField(max_length= 5000, blank=True)
 
     def __str__(self):
         return self.referenceID
