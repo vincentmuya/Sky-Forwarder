@@ -24,7 +24,7 @@
 
   <!-- <div class="row"> -->
 <div class="resul">
-  <h1 class="shipment-result">Shipment Result</h1>
+  <h1 class="shipment-result">Shipment Status</h1>
 </div>
   {% if referenceID %}
     {% for result in referenceID%}
@@ -81,28 +81,25 @@
   <th>Shipment Progress:</th>
 </tr>
 <tr>
-  <td>{{result.Update1}}</td>
+  <td><strong>{{result.Update1}}</strong></td>
 </tr>
 <tr>
-  <td>{{result.Update2}}</td>
+  <td><strong>{{result.Update2}}</strong></td>
 </tr>
 <tr>
-  <td>{{result.Update3}}</td>
+  <td><strong>{{result.Update3}}</strong></td>
 </tr>
 <tr>
-  <td>{{result.Update4}}</td>
+  <td><strong>{{result.Update4}}</strong></td>
 </tr>
 <tr>
-  <td>{{result.Update5}}</td>
+  <td><strong>{{result.Update5}}</strong></td>
 </tr>
 <tr>
-  <td>{{result.Update6}}</td>
+  <td><strong>{{result.Update6}}</strong></td>
 </tr>
-<tr>
-  <td></td>
-</tr>
-  </table>
 
+  </table>
     {% endfor %}
   {% endif %}
   </div>
@@ -110,6 +107,10 @@
 {%include 'footer.html'%}
 <!-- {%include 'footer.html'%} -->
 <style media="screen">
+h1{
+  font-size: 40px;
+  text-align: center;
+}
 .qrcode{
   width: 50px;
   height: 50px;
