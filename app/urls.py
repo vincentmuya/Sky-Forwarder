@@ -9,5 +9,6 @@ urlpatterns=[
     url(r'^cargo/', views.cargo_list, name = 'cargo'),
     url(r'^new/cargo$', views.new_cargo, name='new-cargo'),
     url(r'^track',views.track_cargo, name='track-cargo'),
+    url(r'^service',views.service, name='service'),
 
     ]

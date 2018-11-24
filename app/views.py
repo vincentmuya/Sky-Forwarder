@@ -41,3 +41,6 @@ def cargo_list(request):
     scoty = NewForm.objects.all()
     print(scoty)
     return render(request,'cargo.html',{"scoty":scoty})
+
+def service(request):
+    return render(request, 'service.html')
