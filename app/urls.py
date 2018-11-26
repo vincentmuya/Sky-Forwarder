@@ -11,5 +11,6 @@ urlpatterns=[
     url(r'^track',views.track_cargo, name='track-cargo'),
     url(r'^service',views.service, name='service'),
     url(r'^about',views.about, name='about'),
+    url(r'^contact',views.contact, name='contact'),
 
     ]
