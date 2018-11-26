@@ -1,0 +1,67 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sky Forwader International</title>
+  </head>
+  {%include 'navbar.html'%}
+  <body>
+    <header>
+      <h1 class="abtus">About Us</h1>
+    </header>
+    <div class="container">
+    <h2 class="about" id="about">Who We Are</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="https://cdn-images-1.medium.com/max/1600/1*38WlmyVGjAqVf1mrRnoYnw.png" alt="">
+      </div>
+     <div class="col-md-8">
+         <div class="card">
+             <div class="card-block">
+                 <p>Sky Forwarder International Cargo is an organaisation committed to providing safe passage for your goods ncorporated in Kenya.As our capabilities continue to develop, our pledge to provide you with impressive customer service remains unchanged. In fact it’s our mission. Our dedicated support team operates as a true extension of your logistics department. We put in the time and effort to understand your business, anticipate your needs and deliver exceptional customer experience. Always.</p>
+             </div>
+         </div>
+     </div>
+</div>
+    <section class="overlay">
+      <h2 class="about" id="about">What We Do</h2>
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+       <div class="col-md-8">
+           <div class="card">
+               <div class="card-block">
+                   <p>We design and implement industry-leading solutions in both freight management and contract logistics. Trans Continental Logistics cargo applies its renowned operational expertise to provide best-in-class services across its integrated worldwide network, where our focus is equally on general business and the specialist needs of the automotive, consumer & retail, energy, healthcare, industrial & aerospace and technology sectors.
+                   We use the most expeditious and cost effective solutions to deliver your shipments.Your supply chain is fundamental to your long term success. Correctly structured it becomes your competitive advantage.
+                     No matter how you ship it – by land, sea or air – you'll stay on time and on budget. Plus you can use the same familiar tools that you already use for packages to process and track your palletised and containerised shipments.</p>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-2">
+       </div>
+ </div>
+ <br>
+    </section>
+    </div>
+  </body>
+  </html>
+  <style media="screen">
+  header {
+    background:  url('http://fmgloballogistics.com/wp-content/uploads/2017/11/slide-02.jpg') 60% / cover fixed;
+    background-size: cover;
+    height: 350px;
+  }
+  body{
+    padding-top: 5%;
+  }
+  .abtus{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+  #about{
+    text-align: center;
+  }
+  </style>
+  {% endblock%}
