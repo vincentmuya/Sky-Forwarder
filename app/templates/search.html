@@ -35,7 +35,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="credentials">
-      <h1>Sender Name:</h1>
+      <h1 class="namedet">Sender Name:</h1>
       <p>{{result.SenderName}}</p>
       <hr>
       <h2><strong>SenderAddress:</strong> {{result.SenderAddress}}</h2>
@@ -45,7 +45,7 @@
     </div>
   <div class="col-md-6">
     <div class="credentials">
-    <h1>Reciver Name:</h1>
+    <h1 class="namedet">Reciver Name:</h1>
     <p>{{result.RecieverName}}</p>
     <hr>
     <h2><strong>SenderAddress:</strong> {{result.RecieverAddress}}</h2>
@@ -161,6 +161,15 @@ body{
 @media screen and (max-width: 650px) {
   .track-card{
     width: 21rem;
+  }
+.shipment-result{
+    font-size: 25px;
+  }
+  .credentials h1 {
+      font-size: 25px;
+  }
+  body{
+    padding-top: 0%;
   }
 }
 </style>
