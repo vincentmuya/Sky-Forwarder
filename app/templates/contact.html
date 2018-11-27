@@ -10,6 +10,9 @@
     <div class="container">
       <h1 class="get">Get Intouch</h1>
 <div class="row">
+  <div class="col-md-4">
+<img src="{%static 'images/contact.png'%}" alt="">
+  </div>
   <div class="col-md-8">
     <form>
   <div class="form-group">
@@ -28,9 +31,6 @@
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>
   </div>
-  <div class="col-md-4">
-<img src="{%static 'images/contact.png'%}" alt="">
-  </div>
 </div>
 </div>
   </body>
@@ -43,6 +43,12 @@
   }
   .get{
     text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 45px;
+  }
+  .row{
+    margin-left: 0px;
+    margin-right: 0px;
   }
 </style>
 {% endblock %}
