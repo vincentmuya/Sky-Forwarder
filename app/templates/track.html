@@ -20,7 +20,7 @@
   <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h1 style="color:black">Track your cargo online</h1>
+      <h1 class="trackcar" style="color:black">Track your cargo online</h1>
     <h4>Enter the Reference ID you would like to track:</h4>
     <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 <div class="input-group">
@@ -92,12 +92,28 @@ header{
     padding-top: 20%;
   }
   @media screen and (max-width: 650px) {
+  header{
+    height: 150px;
+  }
     .track-card{
       width: 20rem;
     }
     #menuToggle{
       background-color: white;
     }
+  body{
+    padding-top: 0%;
+  }
+  .trackcar{
+    font-size: 25px;
+  }
+  .trackship{
+    font-size: 30px;
+    padding-top: 15%;
+  }
+  .tcard-heading{
+    font-size: 25px;
+  }
   }
 </style>
   {%endblock%}
