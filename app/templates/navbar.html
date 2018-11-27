@@ -11,8 +11,8 @@
     <!-- Navbar Links -->
     <ul id="menu">
       <li><a href="{%url 'index'%}">Home</a></li><!--
-   --><li><a href="{%url 'service'%}">Services</a></li><!--
    --><li><a href="{%url 'about'%}">About</a></li><!--
+ --><li><a href="{%url 'service'%}">Services</a></li><!--
    --><li><a href="{%url 'contact'%}">Contact</a></li>
         <li><a href="{%url 'track-cargo'%}">Track cargo</a></li>
        <li><a href="{% url 'cargo'%}">Agent Login</a></li>
@@ -20,12 +20,6 @@
   </div>
 </nav>
 
-
-<!-- Menu Icon -->
-<!-- <div class="menuIcon">
-  <span class="icon icon-bars"></span>
-  <span class="icon icon-bars overlay"></span>
-</div> -->
 <div id="menuToggle">
   <input type="checkbox" />
   <br>
@@ -36,6 +30,9 @@
 
   <ul id="menu">
     <a href="{%url 'index'%}"><li>Home</li></a>
+    <a href="{%url 'about'%}"><li>About Us</li></a>
+    <a href="{%url 'service'%}"><li>Services</li></a>
+    <a href="{%url 'contact'%}"><li>Contact</li></a>
     <a href="{%url 'track-cargo'%}"><li>Track cargo</li></a>
     <a href="{% url 'cargo'%}"><li>Agent Login</li></a>
     </ul>
