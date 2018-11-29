@@ -27,8 +27,7 @@
 </head>
 <body>
 {%include 'navbar.html'%}
-<br>
-<br>
+<div class="container">
 <div class="row">
   <div class="col-md-2">
     <a href="https://freightcargo.herokuapp.com/admin/app/newform/"><button type="button" name="button" class="btn btn-primary">Edit/Update Cargo</button></a>
@@ -43,7 +42,6 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <!-- <th scope="col">#</th> -->
             <th scope="col">Sender Name</th>
             <th scope="col">Sender Address</th>
             <th scope="col">Reciever Name</th>
@@ -51,11 +49,10 @@
             <th scope="col">referenceID</th>
             <th scope="col">Goods are From</th>
             <th scope="col">Goods To </th>
-            <th scope="col">Depature Date</th>
+            <!-- <th scope="col">Depature Date</th>
             <th scope="col">Depature time</th>
-
             <th scope="col">Goods Description</th>
-            <th scope="col">Status</th>
+            <th scope="col">Status</th> -->
           </tr>
         </thead>
         <!-- Looping through cargo   -->
@@ -71,17 +68,17 @@
             <td>{{cargos_item.referenceID}}</td>
             <td>{{cargos_item.GoodsareFrom}}</td>
             <td>{{cargos_item.GoodsTo}}</td>
-            <td>{{cargos_item.DepatureDate}}</td>
+            <!-- <td>{{cargos_item.DepatureDate}}</td>
             <td>{{cargos_item.Depaturetime}}</td>
             <td>{{cargos_item.GoodsDescription}}</td>
-            <td>{{cargos_item.Status}}</td>
+            <td>{{cargos_item.Status}}</td> -->
 
           </tr>
         </tbody>
         {%endfor%}
-        <h1>Length{{scoty|length}}</h1>
       </table>
       <div class="trackBody">
+      </div>
       </div>
     </body>
     {%include 'footer.html'%}
@@ -90,7 +87,7 @@
     <style media="screen">
     body{
       height: 100%;
-      padding-top: 4%;
+      padding-top: 5%;
       background-color: white;
       color: black;
     }
@@ -99,6 +96,13 @@
     }
       .trackBody{
         padding: 10%;
+      }
+      .row{
+      	margin-left: 0px;
+      	margin-right: 0px;
+      }
+      table{
+        border-collapse: collapse;
       }
       @media screen and (max-width: 650px) {
       body{
