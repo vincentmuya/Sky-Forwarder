@@ -77,26 +77,27 @@
 </div>
 </div>
 <table id="customers">
-    <tr>
+
+  <tr>
   <th>Shipment Progress:</th>
 </tr>
 <tr>
-  <td><strong>{{result.Update1}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update1}}</strong></td>
 </tr>
 <tr>
-  <td><strong>{{result.Update2}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update2}}</strong></td>
 </tr>
 <tr>
-  <td><strong>{{result.Update3}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update3}}</strong></td>
 </tr>
 <tr>
-  <td><strong>{{result.Update4}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update4}}</strong></td>
 </tr>
 <tr>
-  <td><strong>{{result.Update5}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update5}}</strong></td>
 </tr>
 <tr>
-  <td><strong>{{result.Update6}}</strong></td>
+  <td class="blink_me"><strong>{{result.Update6}}</strong></td>
 </tr>
   </table>
     {% endfor %}
@@ -160,6 +161,15 @@ body{
   color: black;
   max-width: 100%;
 }
+/*.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}*/
 @media screen and (max-width: 650px) {
   .track-card{
     width: 21rem;
@@ -176,3 +186,21 @@ body{
 }
 </style>
 {% endblock %}
+<!--scripts  -->
+{% block scripts %}
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- pooper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js"></script>
+{% bootstrap_javascript %}
+
+<script>
+$(document).ready(function() {
+
+
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
+
+{% comment %}
+<script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script> {% endcomment %} {% endblock %}
