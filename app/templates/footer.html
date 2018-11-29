@@ -8,28 +8,28 @@
 </head>
 <div class="container-fluid">
       <footer class="footer">
-        <div class="row">
+        <div id="dont" class="row">
           <div class="col-md-3">
           </div>
           <div class="col-md-6">
         <div class="footer-top">
           <div class="row">
             <div class="col-md-2">
-              <img src="https://beoctopus.com/sites/default/files/company/office.png" alt="" style="width:60px;height:60px;">
+              <img class="count_img" src="https://beoctopus.com/sites/default/files/company/office.png" alt="">
             </div>
             <div class="col-md-2">
           <div class="count">45</div>
           <br><p class="count-caption">Offices Worldwide</p>
           </div>
           <div class="col-md-2">
-            <img src="https://www.espiritu.org/cms/lib/AZ02000898/Centricity/Domain/2060/staff.png" alt="" style="width:60px;height:60px;">
+            <img class="count_img" src="https://www.espiritu.org/cms/lib/AZ02000898/Centricity/Domain/2060/staff.png" alt="">
           </div>
           <div class="col-md-2">
           <div class="count">100</div>
           <br><p class="count-caption">Professional Staff</p>
           </div>
           <div class="col-md-2">
-            <img src="http://pngimg.com/uploads/globe/globe_PNG33.png" alt="" style="width:60px;height:60px;">
+            <img class="count_img" src="http://pngimg.com/uploads/globe/globe_PNG33.png" alt="" >
           </div>
           <div class="col-md-2">
           <div class="count">115</div>
@@ -94,6 +94,11 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
 .count-caption{
   color: white;
     margin-left: 20px;
+}
+.count_img{
+  width: 60px;
+  height: 60px;
+
 }
 .footer {
   padding: 30px 0;
@@ -194,6 +199,14 @@ footer {
     background-position: right 0;
 }
 @media screen and (max-width: 650px) {
+.count_img{
+  width: 20px;
+  height: 20px;
+
+}
+#dont{
+  display: none;
+}
 #fa{
   display: none;
 }
@@ -202,7 +215,7 @@ footer {
     padding-top: 0px;
     /*float: left;*/
     padding-left: 0px;
-    font-size: 15px;
+    font-size: 20px;
 }
 .socials {
     margin-right: 96px;
