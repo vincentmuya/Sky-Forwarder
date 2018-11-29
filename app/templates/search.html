@@ -36,6 +36,7 @@
     <div class="col-md-6">
       <div class="credentials">
       <h1 class="namedet">Sender Name:</h1>
+      <hr>
       <p>{{result.SenderName}}</p>
       <hr>
       <h2><strong>SenderAddress:</strong> {{result.SenderAddress}}</h2>
@@ -46,6 +47,7 @@
   <div class="col-md-6">
     <div class="credentials">
     <h1 class="namedet">Reciver Name:</h1>
+    <hr>
     <p>{{result.RecieverName}}</p>
     <hr>
     <h2><strong>SenderAddress:</strong> {{result.RecieverAddress}}</h2>
@@ -69,9 +71,7 @@
   </tr>
   <tr>
     <td><strong>Goods Description: </strong>{{result.GoodsDescription}}</td>
-  </tr>
-  <tr>
-    <td><strong>Status</strong>: {{result.Status}}</td>
+    <td></td>
   </tr>
   </table>
 </div>
@@ -111,8 +111,8 @@ h1{
   text-align: center;
 }
 .qrcode{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 30px;
 }
 .track-card{
   width: 71rem;
@@ -141,6 +141,8 @@ h1{
 .credentials{
   background-color: #f2f2f2;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px;
+  padding: 2%;
 }
 .credentials h1{
   font-size: 40px;
