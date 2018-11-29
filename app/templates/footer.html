@@ -1,4 +1,4 @@
-{%load staticfiles%}
+{%load staticfiles%} {%block content%} {% load bootstrap3 %}
 
 {%block styles%}
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
@@ -9,6 +9,13 @@
 <div class="container-fluid">
   <div class="row">
       <footer class="footer">
+        <div class="footer-top">
+          <div class="count">45</div>
+          <div class="count">100</div>
+          <div class="count">115</div>
+          <div class="count">50</div>
+          <div class="count">125</div>
+        </div>
         <div class="container">
           <div class="f_phone"><span>Call Us:</span> +254 712 345 678</div>
   					<div class="socials">
@@ -31,6 +38,29 @@
     padding-right: 0px;
     padding-left: 0px;
   }
+  .count {
+  width: 60px;
+  height: 60px;
+  background: lightgray;
+  border-radius: 50%;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: verdana;
+  float: left;
+  margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  text-shadow: 1px 1px black;
+  -webkit-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
+}
 .footer {
   padding: 30px 0;
   width: 100%;
@@ -150,5 +180,43 @@ footer {
     margin-bottom: 0px;
 }
 }
-
 </style>
+{% endblock %}
+<!--scripts  -->
+{% block scripts %}
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- pooper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js"></script>
+{% bootstrap_javascript %}
+
+<script>
+$(document).ready(function() {
+
+  var counters = $(".count");
+  var countersQuantity = counters.length;
+  var counter = [];
+
+  for (i = 0; i < countersQuantity; i++) {
+    counter[i] = parseInt(counters[i].innerHTML);
+  }
+
+  var count = function(start, value, id) {
+    var localStart = start;
+    setInterval(function() {
+      if (localStart < value) {
+        localStart++;
+        counters[id].innerHTML = localStart;
+      }
+    }, 40);
+  }
+
+  for (j = 0; j < countersQuantity; j++) {
+    count(0, counter[j], j);
+  }
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
+
+{% comment %}
+<script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script> {% endcomment %} {% endblock %}
