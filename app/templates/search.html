@@ -36,23 +36,19 @@
   <div class="row">
     <div class="col-md-6">
       <div class="credentials">
-      <h1 class="namedet">Sender Name:</h1>
-      <hr>
+      <h2 class="titlebold">Sender Name:</h2>
       <p>{{result.SenderName}}</p>
-      <hr>
-      <h2><strong>SenderAddress:</strong> {{result.SenderAddress}}</h2>
-      <p></p>
+      <h2 class="senderadd"><strong>SenderAddress:</strong></h2>
+      <p>{{result.SenderAddress}}</p>
     </div>
 
     </div>
   <div class="col-md-6">
     <div class="credentials">
-    <h1 class="namedet">Reciver Name:</h1>
-    <hr>
+    <h2 class="titlebold">Receiver Name:</h2>
     <p>{{result.RecieverName}}</p>
-    <hr>
-    <h2><strong>SenderAddress:</strong> {{result.RecieverAddress}}</h2>
-    <p></p>
+    <h2 class="receiveradd"><strong>ReceiverAddress:</strong> </h2>
+    <p>{{result.RecieverAddress}}</p>
     </div>
   </div>
   </div>
@@ -109,7 +105,13 @@
 <style media="screen">
 h1{
   font-size: 40px;
-  text-align: center;
+}
+.titlebold{
+  font-weight: 600;
+  font-size: 30px;
+}
+.receiveradd,.senderadd{
+  font-size: 20px;
 }
 .qrcode{
   width: 40px;
@@ -144,6 +146,7 @@ h1{
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px;
   padding: 2%;
+  width: 60%;
 }
 .credentials h1{
   font-size: 40px;
