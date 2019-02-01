@@ -25,13 +25,13 @@
 
   <!-- <div class="row"> -->
 <div class="resul">
-  <h1 class="shipment-result">Shipment Status</h1>
+  <h1 class="trackresult"><span style="color:blue">Tracking</span> <span style="color:orange">Results</span></h1>
 </div>
   {% if referenceID %}
     {% for result in referenceID%}
     <div class="row">
       <div class="col-md-1">
-  <h1>testing</h1>
+  <h1></h1>
       </div>
       <div class="col-md-10">
   <div class="panel panel-default">
@@ -80,7 +80,7 @@
 </div>
 </div>
 <div class="col-md-1">
-<h1>testing</h1>
+<h1></h1>
 </div>
 </div>
 <table id="customers">
@@ -126,6 +126,12 @@ h1{
 .panel{
   width: 100%;
 }
+.trackresult{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  font-size: 45px;
+  color: black;
+}
 .qrcode{
   width: 40px;
   height: 30px;
@@ -160,6 +166,7 @@ h1{
   border-radius: 10px;
   box-shadow: 2px 2px 2px 2px;
   padding: 2%;
+  margin-left: 10%;
   width: 60%;
 }
 .credentials h1{
