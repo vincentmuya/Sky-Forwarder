@@ -29,6 +29,11 @@
 </div>
   {% if referenceID %}
     {% for result in referenceID%}
+    <div class="row">
+      <div class="col-md-1">
+  <h1>testing</h1>
+      </div>
+      <div class="col-md-10">
   <div class="panel panel-default">
     <div class="panel-heading"><strong>ReferenceID:</strong> {{result.referenceID}}   <img src="http://qrcode.kaywa.com/img.php?s=8&d=Certified%20Post%20Whore%21" class="qrcode" alt="Qr code"></div>
     <br>
@@ -73,6 +78,11 @@
   </table>
 </div>
 </div>
+</div>
+<div class="col-md-1">
+<h1>testing</h1>
+</div>
+</div>
 <table id="customers">
 
   <tr>
@@ -113,22 +123,26 @@ h1{
 .receiveradd,.senderadd{
   font-size: 20px;
 }
+.panel{
+  width: 100%;
+}
 .qrcode{
   width: 40px;
   height: 30px;
 }
 .track-card{
-  width: 71rem;
+  width: 60rem;
 }
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+        width: 95.8%;
 }
 
 #customers td {
     border: 1px solid #ddd;
     padding: 8px;
+    width: 110px;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
