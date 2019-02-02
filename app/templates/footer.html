@@ -45,7 +45,8 @@
 <footer class="footer">
   <div class="row">
     <div class="col-md-4">
-      <img class="footer-logo" src="{%static 'images/logo.png'%}" alt="">
+      <h1 class="skybrand"><span style="color:blue">Sky Forwarder</span><br><span style="color:orange">International Cargo</span></h1>© 2010	| Privacy Policy
+      <img class="footer-logo" src="{%static 'images/log.png'%}" alt="">
     </div>
     <div class="col-md-2">
       <h3 class="footer-head">Phone numbers</h3>
@@ -59,13 +60,19 @@
     </div>
     <div class="col-md-2">
       <h3 class="footer-head">Emails</h3>
-      <ul>
+      <ul class="data">
         <li>info@skyforwarder.com</li>
         <li>miguel@skyforwarder.com</li>
       </ul>
     </div>
     <div class="col-md-4">
-      <h3 class="footer-head">Socials</h3>
+      <div class="social">
+        <ul>
+          <li><img src="http://pngimg.com/uploads/twitter/twitter_PNG1.png" class="socialimg" alt="" ></li>
+          <li><img src="https://image.flaticon.com/icons/png/512/34/34304.png" class="socialimg" alt="" ></li>
+          <li><img src="http://www.logospng.com/images/5/google-logo-design-in-black-pictures-to-pin-on-pinterest-5351.png" class="socialimg" alt="" ></li>
+        </ul>
+      </div>
     </div>
   </div>
       </footer>
@@ -116,6 +123,7 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
 }
 .footer {
   padding:0px;
+  margin-top: 30px;
   width: 100%;
   height: 200px;
   background: white;
@@ -123,7 +131,7 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
   position: sticky;
 }
 .footer-logo{
-  height: 150px;
+  height: 140px;
   width: 300px;
 }
 .bottom-bar {
@@ -139,7 +147,30 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
   font-weight: bold;
 }
 .data{
-  font-size: 20px;
+  font-size: 17px;
+}
+.skybrand{
+  	font-weight: 600;
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.social {
+    width: 100%;
+}
+.social ul {
+    display:inline-block;
+}
+.social li {
+    float:left;
+    background-color: orange;
+    border-radius: 50%;
+        padding: 15px;
+}
+.social li + li {
+    margin-left:20px;
+}
+.socialimg{
+  height: 80px;
+  width: 80px;
 }
 /*footer {
 	display: block;
