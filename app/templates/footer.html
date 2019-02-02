@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div class="container-fluid">
-      <footer class="footer">
+
         <div id="dont" class="row">
           <div class="col-md-3">
           </div>
@@ -41,32 +41,32 @@
         <!-- <div class="col-md-2">
         </div> -->
       </div>
-        <br>
-        <div class="row">
-        <div class="container">
-          <h3 class="f_phone">Contact Us</h3>
-          <div class="f_phone"><span class="glyphicon glyphicon-earphone" style="color:orange"></span> +254 712 345 678 |+254 712 345 678</div>
-          <p class="f_phone">Nairobi,Kenya</p>
-          <p class="f_phone"><span class="glyphicon glyphicon-envelope" style="color:orange"></span>skyforwarder@mail.com</p>
-          <div class="socials">
-  						<a href="#" class="fa fa-twitter"></a>
-  						<a href="#" class="fa fa-facebook"></a>
-  						<a href="#" class="fa fa-google-plus"></a>
-  					</div>
-  					<div class="copy">
-  						<div class="st1">
-  						<div class="brand">Skyforwader<span style="color:orange" class="color1">I</span>nternational </div>
-  						&copy; 2018	| <a href="#">Privacy Policy</a> </div>
-  					</div>
-        </div>
-      </footer>
+        
+<footer class="footer">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="footer-logo" src="{%static 'images/logo.png'%}" alt="">
+    </div>
+    <div class="col-md-2">
+      <h1>Phone numbers</h1>
+    </div>
+    <div class="col-md-2">
+      <h1>Emails</h1>
+    </div>
+    <div class="col-md-4">
+      <h1>Socials</h1>
+    </div>
   </div>
+      </footer>
 </div>
 <style media="screen">
 /* f. Footer section */
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
+  }
+  #dont{
+    background-color: black;
   }
   .count {
   width: 50px;
@@ -108,125 +108,22 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
   color: #cf401b;
   position: sticky;
 }
-
-footer {
+.footer-logo{
+  height: 200px;
+  width: 300px;
+}
+/*footer {
 	display: block;
     padding: 0px 0 60px;
     font-size: 14px;
     color: #aaa;
     line-height: 18px;
     font-family: 'Roboto Condensed', sans-serif;
-}
+}*/
 
-.copy {
-    font-family: 'Open Sans', sans-serif;
-}
 
-.st1 {
-    padding-top: 40px;
-    color: #e2e2e2;
-    margin-bottom: 8px;
-}
-
-.brand {
-    position: relative;
-    top: -7px;
-    font: 30px/18px 'Roboto Condensed', sans-serif;
-    display: inline-block;
-    font-size: 30px;
-}
-
-.f_phone {
-    padding-top: 0px;
-    font-size: 20px;
-    line-height: 36px;
-    /*float: right;*/
-    padding-left: 600px;
-    color: #e2e2e2;
-}
-
-.f_phone span {
-    position: relative;
-    top: 4px;
-    font-size: 16px;
-}
-.socials {
-    margin-right: -390px;
-    padding-top: 0px;
-    float: right;
-    overflow: hidden;
-}
-
-.socials a {
-    display: block;
-    float: left;
-    /*margin: 0 6px 0 7px;*/
-    color: #fff;
-    text-align: center;
-    background-color: orange;
-    border-radius: 500px;
-    width: 58px;
-    height: 58px;
-    font-size: 24px;
-    line-height: 58px;
-}
-
-.socials a:hover {
-    color: #fdc903;
-    background-color: #585757;
-}
-
-#toTop {
-    display: none;
-    text-decoration: none;
-    position: fixed;
-    bottom: 40px;
-    left: 51%;
-    margin-left: 610px;
-    overflow: hidden;
-    width: 61px;
-    height: 75px;
-    border: none;
-    text-indent: -999px;
-    z-index: 20;
-    background: url(../images/totop.png) no-repeat left 0;
-    transition: 0s ease;
-    -o-transition: 0s ease;
-    -webkit-transition: 0s ease;
-}
-#toTop:hover {
-    outline: none;
-    background-position: right 0;
-}
 @media screen and (max-width: 650px) {
-.count_img{
-  width: 20px;
-  height: 20px;
 
-}
-#dont{
-  display: none;
-}
-#fa{
-  display: none;
-}
-.f_phone {
-    position: relative;
-    padding-top: 0px;
-    /*float: left;*/
-    padding-left: 0px;
-    font-size: 20px;
-}
-.socials {
-    margin-right: 96px;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    float: right;
-    overflow: hidden;
-}
-.st1 {
-    margin-bottom: 0px;
-}
 }
 </style>
 {% endblock %}
