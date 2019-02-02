@@ -41,23 +41,37 @@
         <!-- <div class="col-md-2">
         </div> -->
       </div>
-        
+
 <footer class="footer">
   <div class="row">
     <div class="col-md-4">
       <img class="footer-logo" src="{%static 'images/logo.png'%}" alt="">
     </div>
     <div class="col-md-2">
-      <h1>Phone numbers</h1>
+      <h3 class="footer-head">Phone numbers</h3>
+      <ul class="data">
+        <li>Kenya:+254712345678</li>
+        <li>Kenya:+254712345678</li>
+        <li>Kenya:+254712345678</li>
+        <li>Kenya:+254712345678</li>
+        <li>Kenya:+254712345678</li>
+      </ul>
     </div>
     <div class="col-md-2">
-      <h1>Emails</h1>
+      <h3 class="footer-head">Emails</h3>
+      <ul>
+        <li>info@skyforwarder.com</li>
+        <li>miguel@skyforwarder.com</li>
+      </ul>
     </div>
     <div class="col-md-4">
-      <h1>Socials</h1>
+      <h3 class="footer-head">Socials</h3>
     </div>
   </div>
       </footer>
+      <div class="bottom-bar">
+      All Rights Reserved © 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+  </div>
 </div>
 <style media="screen">
 /* f. Footer section */
@@ -101,16 +115,31 @@ box-shadow: 0px 0px 72px -9px rgba(0,0,0,0.75);
 
 }
 .footer {
-  padding: 30px 0;
+  padding:0px;
   width: 100%;
-  height: 320px;
-  background: #4a4a4a;
-  color: #cf401b;
+  height: 200px;
+  background: white;
+  color: black;
   position: sticky;
 }
 .footer-logo{
-  height: 200px;
+  height: 150px;
   width: 300px;
+}
+.bottom-bar {
+  position:relative;
+  text-align:center;
+  font-size:.8em;
+  text-transform:uppercase;
+  background:#000;
+  padding:15px 0;
+}
+.footer-head{
+  font-size: 20px;
+  font-weight: bold;
+}
+.data{
+  font-size: 20px;
 }
 /*footer {
 	display: block;
