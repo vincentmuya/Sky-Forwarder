@@ -57,5 +57,5 @@ def update_cargo(request, pk):
     form = NewNewFormForm(request.POST or None, instance=instance)
     if form.is_valid():
         form.save()
-        return redirect('cargo.html')
+        return redirect('/')
     return render(request, 'update_cargo.html', {'form': form})
