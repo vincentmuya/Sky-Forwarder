@@ -2,25 +2,20 @@ from django.db import models
 
 # Create your models here.
 class NewForm(models.Model):
-    SenderName=models.CharField(max_length = 250)
-    SenderAddress=models.CharField(max_length = 250)
-    RecieverName=models.CharField(max_length = 250)
-    RecieverAddress=models.CharField(max_length = 250)
-    referenceID=models.CharField(max_length = 250)
-    GoodsareFrom=models.CharField(max_length = 250)
-    GoodsTo=models.CharField(max_length = 250)
-    DepatureDate=models.CharField(max_length = 250)
-    Depaturetime=models.CharField(max_length = 250)
-    ArrivalDate=models.CharField(max_length = 250)
-    ArrivalTime=models.CharField(max_length = 250)
-    GoodsDescription=models.TextField(max_length = 1000)
+    SenderName=models.CharField(max_length = 2000)
+    SenderAddress=models.CharField(max_length = 2000)
+    RecieverName=models.CharField(max_length = 2000)
+    RecieverAddress=models.CharField(max_length = 2000)
+    referenceID=models.CharField(max_length = 2000)
+    GoodsareFrom=models.CharField(max_length = 2000)
+    GoodsTo=models.CharField(max_length = 2000)
+    DepatureDate=models.CharField(max_length = 2000)
+    Depaturetime=models.CharField(max_length = 2000)
+    ArrivalDate=models.CharField(max_length = 2000)
+    ArrivalTime=models.CharField(max_length = 2000)
+    GoodsDescription=models.TextField(max_length = 5000)
     Status=models.TextField(max_length = 5000)
-    Update1=models.TextField(max_length= 5000)
-    Update2=models.TextField(max_length= 5000, blank=True)
-    Update3=models.TextField(max_length= 5000, blank=True)
-    Update4=models.TextField(max_length= 5000, blank=True)
-    Update5=models.TextField(max_length= 5000, blank=True)
-    Update6=models.TextField(max_length= 5000, blank=True)
+
 
     def __str__(self):
         return self.referenceID
