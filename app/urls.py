@@ -12,5 +12,5 @@ urlpatterns=[
     url(r'^service',views.service, name='service'),
     url(r'^about',views.about, name='about'),
     url(r'^contact',views.contact, name='contact'),
-
+    url(r'^update/cargo/(?P<pk>\d+)/$', views.update_cargo, name='update-cargo'),
     ]

@@ -1,7 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .forms import NewNewFormForm
 from .models import NewForm
+from django.db import transaction
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -37,7 +38,7 @@ def search_results(request):
         return render(request, 'search.html',{"message":message})
 
 @login_required(login_url='/accounts/login/')
-def cargo_list(request):
+def cargo_list(request ):
     scoty = NewForm.objects.all()
     print(scoty)
     return render(request,'cargo.html',{"scoty":scoty})
@@ -50,3 +51,11 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def update_cargo(request, pk):
+    instance = get_object_or_404(NewForm, pk=pk)
+    form = NewNewFormForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        form.save()
+        return redirect('next_view')
+    return render(request, 'update_cargo.html', {'form': form})

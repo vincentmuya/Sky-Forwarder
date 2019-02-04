@@ -26,7 +26,7 @@
 <div class="input-group">
 <input type="text" class="form-control" placeholder="Search Cargo" name="referenceID">
 <div class="input-group-btn">
-  <button class="btn btn-primary" >Search</button>
+  <button class="btn btn-primary" id="search" >Search</button>
 </div>
 </div></form>
 </div>
@@ -40,8 +40,6 @@
 </div>
 </div>
 </div>
-  <div class="trackBody">
-  </div>
 </div>
   </body>
   {%include 'footer.html'%}
@@ -52,6 +50,9 @@ header{
   background: url('https://www.m2.com.lb/modules//smartblog/images/142.jpg')60% / cover fixed;
   background-size: cover;
   height: 200px;
+}
+#search{
+  background-color: orange;
 }
 .trackship{
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -87,9 +88,6 @@ header{
   }
   h3{
     font-size: 35px;
-  }
-  .trackBody{
-    padding-top: 25%;
   }
   @media screen and (max-width: 650px) {
   header{

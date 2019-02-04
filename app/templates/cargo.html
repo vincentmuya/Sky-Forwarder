@@ -30,61 +30,66 @@
 <div class="container">
 <div class="row">
   <div class="col-md-2">
-    <a href="https://freightcargo.herokuapp.com/admin/app/newform/"><button type="button" name="button" class="btn btn-primary">Edit/Update Cargo</button></a>
+    <a href="https://freightcargo.herokuapp.com/admin/app/newform/"><button type="button" id="admin" name="button" class="btn btn-primary">Edit/Update Cargo</button></a>
   </div>
   <div class="col-md-2">
-<a href="{%url 'new-cargo'%}"><button type="button" name="button" class="btn btn-primary">Add Cargo</button></a>
+<a href="{%url 'new-cargo'%}"><button type="button" id="admin" name="button" class="btn btn-primary">Add Cargo</button></a>
   </div>
   <div class="col-md-4">
-    <a href="/logout"><button type="button" name="button" class="btn btn-primary">Log out</button></a>
+    <a href="/logout"><button type="button" id="admin" name="button" class="btn btn-primary">Log out</button></a>
   </div>
 </div>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Sender Name</th>
-            <th scope="col">Sender Address</th>
-            <th scope="col">Reciever Name</th>
-            <th scope="col">Reciever Address</th>
-            <th scope="col">referenceID</th>
-            <th scope="col">Goods are From</th>
-            <th scope="col">Goods To </th>
-            <!-- <th scope="col">Depature Date</th>
-            <th scope="col">Depature time</th>
-            <th scope="col">Goods Description</th>
-            <th scope="col">Status</th> -->
-          </tr>
-        </thead>
+<table id="customers">
+<tr>
+<th>Reference ID</th>
+<th>Sender Name</th>
+<th>Sender Address</th>
+<th>Receiver Name</th>
+<th>Receiver Address</th>
+</tr>
         <!-- Looping through cargo   -->
         {%  for cargos_item in scoty %}
-        <tbody>
-          <tr>
-            <!-- <th scope="row">#</th> -->
-            <!--Display cargo transparent cargo  -->
-            <td>{{cargos_item.SenderName}}</td>
-            <td>{{cargos_item.SenderAddress}}</td>
-            <td>{{cargos_item.RecieverName}}</td>
-            <td>{{cargos_item.RecieverAddress}}</td>
-            <td>{{cargos_item.referenceID}}</td>
-            <td>{{cargos_item.GoodsareFrom}}</td>
-            <td>{{cargos_item.GoodsTo}}</td>
-            <!-- <td>{{cargos_item.DepatureDate}}</td>
-            <td>{{cargos_item.Depaturetime}}</td>
-            <td>{{cargos_item.GoodsDescription}}</td>
-            <td>{{cargos_item.Status}}</td> -->
-
-          </tr>
-        </tbody>
+        <tr>
+          <td>{{cargos_item.referenceID}}</td>
+          <td>{{cargos_item.SenderName}}</td>
+          <td>{{cargos_item.SenderAddress}}</td>
+          <td>{{cargos_item.RecieverName}}</td>
+          <td>{{cargos_item.RecieverAddress}}</td>
+          <td><a href="update/cargo/{{cargo_item.pk}}"><button type="button" name="button">Edit</button></a></td>
+        </tr>
         {%endfor%}
       </table>
-      <div class="trackBody">
-      </div>
       </div>
     </body>
     {%include 'footer.html'%}
     <!--==============================footer=================================-->
 
     <style media="screen">
+    #admin{
+      background-color: orange;
+    }
+    #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
     body{
       height: 100%;
       padding-top: 5%;
@@ -94,9 +99,6 @@
     p{
       color: black;
     }
-      .trackBody{
-        padding: 15%;
-      }
       .row{
       	margin-left: 0px;
       	margin-right: 0px;
