@@ -32,7 +32,8 @@
     <div class="container">
       <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <li class="list-group-item">{{ form.as_p }}</li>
+        {% bootstrap_form form%}
+        
         <button type="submit" class="btn btn-info">Save changes</button>
       </form>
   </div>
