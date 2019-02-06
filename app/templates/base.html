@@ -35,18 +35,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js"></script>
     {% bootstrap_javascript %}
 
-    <script>
-    var myVar;
-
-    function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-    }
-
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
-    }
-    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
 
     {% comment %}

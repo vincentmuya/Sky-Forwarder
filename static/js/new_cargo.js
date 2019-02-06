@@ -4,7 +4,7 @@ $(document).ready(function(){
     form = $("form")
 
     $.ajax({
-      'url':'/ajax/newitem/',
+      'url':'/ajax/newcargo/',
       'type':'POST',
       'data':form.serialize(),
       'dataType':'json',

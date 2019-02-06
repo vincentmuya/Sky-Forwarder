@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect, get_object_or_404
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .forms import NewNewFormForm
 from .models import NewForm
-from django.db import transaction
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 
@@ -25,26 +24,25 @@ def new_cargo(request):
     form = NewNewFormForm()
     return render(request, 'new_cargo.html', {"form": form})
 
-def newitem(request):
-        SenderName = request.POST.get('SenderName')
-        SenderAddress = request.POST.get('SenderAddress')
-        RecieverName = request.POST.get('RecieverName')
-        RecieverAddress = request.POST.get('RecieverAddress')
-        referenceID = request.POST.get('referenceID')
-        GoodsareFrom = request.POST.get('GoodsareFrom')
-        GoodsTo = request.POST.get('GoodsTo')
-        DepatureDate = request.POST.get('DepatureDate')
-        Depaturetime = request.POST.get('Depaturetime')
-        ArrivalDate = request.POST.get('ArrivalDate')
-        ArrivalTime = request.POST.get('ArrivalTime')
-        GoodsDescription = request.POST.get('GoodsDescription')
-        Status = request.POST.get('Status')
+def newcargo(request):
+    SenderName = request.POST.get('SenderName')
+    SenderAddress = request.POST.get('SenderAddress')
+    RecieverName = request.POST.get('RecieverName')
+    RecieverAddress = request.POST.get('RecieverAddress')
+    referenceID = request.POST.get('referenceID')
+    GoodsareFrom = request.POST.get('GoodsareFrom')
+    GoodsTo = request.POST.get('GoodsTo')
+    DepatureDate = request.POST.get('DepatureDate')
+    Depaturetime = request.POST.get('Depaturetime')
+    ArrivalDate = request.POST.get('ArrivalDate')
+    ArrivalTime = request.POST.get('ArrivalTime')
+    GoodsDescription = request.POST.get('GoodsDescription')
+    Status = request.POST.get('Status')
 
-        recipient=Item(SenderName=SenderName, SenderAddress=SenderAddress, RecieverName=RecieverName, RecieverAddress=RecieverAddress, referenceID=referenceID, GoodsareFrom=GoodsareFrom, GoodsTo=GoodsTo,
-        DepatureDate=DepatureDate, Depaturetime=Depaturetime, ArrivalDate=ArrivalDate, ArrivalTime=ArrivalTime, GoodsDescription=GoodsDescription, Status=Status)
-        recipient.save()
-        data = {'success': 'Cargo has been added'}
-        return JsonResponse(data)
+    recipient=NewForm(SenderName=SenderName, SenderAddress=SenderAddress, RecieverName=RecieverName, RecieverAddress=RecieverAddress, referenceID=referenceID, GoodsareFrom=GoodsareFrom, GoodsTo=GoodsTo, DepatureDate=DepatureDate, Depaturetime=Depaturetime, ArrivalDate=ArrivalDate, ArrivalTime=ArrivalTime, GoodsDescription=GoodsDescription, Status=Status)
+    recipient.save()
+    data = {'success': 'Cargo Posted'}
+    return JsonResponse(data)
 
 def search_results(request):
 
