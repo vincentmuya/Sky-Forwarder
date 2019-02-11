@@ -103,3 +103,11 @@ def new_secure(request):
 def secure(request):
     sec = Secure.objects.all()
     return render(request, 'secure.html',{"sec":sec})
+
+def update_secure(request, pk):
+    instance = get_object_or_404(Secure, pk=pk)
+    form = SecureForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+    return render(request, 'update_cargo.html', {'form': form})

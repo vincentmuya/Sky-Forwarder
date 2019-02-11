@@ -55,6 +55,7 @@
           <td>{{secure_item.RecieverName}}</td>
           <td>{{secure_item.Origin}}</td>
           <td>{{secure_item.Destination}}</td>
+          <td><a href="{% url 'update-secure' secure_item.pk %}"><button type="button" name="button">Edit</button></a></td>
         </tr>
         {%endfor%}
       </table>
