@@ -84,3 +84,18 @@ def newSecure(request):
     current_user = request.user
     form = SecureForm()
     return render(request, 'new_secure.html', {"form":form})
+
+def new_secure(request):
+    DepositorName = request.POST.get('DepositorName')
+    ReceiverName = request.POST.get('ReceiverName')
+    TrackNo = request.POST.get('TrackNo')
+    Origin = request.POST.get('Origin')
+    Destination = request.POST.get('Destination')
+    TypeOfShipment = request.POST.get('TypeOfShipment')
+    NatureOfGoods = request.POST.get('NatureOfGoods')
+    Status = request.POST.get('Status')
+
+    recipient=Secure(DepositorName=DepositorName, ReceiverName=ReceiverName, TrackNo=TrackNo, TrackNo=TrackNo, Origin=Origin, Destination=Destination, TypeOfShipment=TypeOfShipment, NatureOfGoods=NatureOfGoods, Status=Status)
+    recipient.save()
+    data = {'success': 'Secure Cargo Posted'}
+    return JsonResponse(data)

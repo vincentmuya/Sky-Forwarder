@@ -15,5 +15,6 @@ urlpatterns=[
     url(r'^update/cargo/(?P<pk>\d+)/$', views.update_cargo, name='update-cargo'),
     url(r'^ajax/newcargo/$', views.newcargo, name='newcargo'),
     url(r'^new/secure$', views.newSecure, name='new-secure'),
+    url(r'^ajax/newsecure/$', views.new_secure, name='newsecure'),
 
     ]
