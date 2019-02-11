@@ -12,6 +12,9 @@ def index(request):
 def track_cargo(request):
     return render(request, 'track.html')
 
+def track_secure_cargo(request):
+    return render(request, 'secure_track.html')
+
 @login_required(login_url='/accounts/login/')
 def new_cargo(request):
     current_user = request.user
@@ -119,8 +122,8 @@ def search_secure(request):
         secure_ref = Secure.search_by_TrackNo(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search_track.html',{"message":message,"TrackNo":secure_ref})
+        return render(request, 'secure_result.html',{"message":message,"TrackNo":secure_ref})
 
     else:
         message = "You haven't searched for any term"
-        return render(request, 'search.html',{"message":message})
+        return render(request, 'secure_result.html',{"message":message})
