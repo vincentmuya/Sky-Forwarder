@@ -1,0 +1,149 @@
+
+{%extends 'base.html'%} {% load bootstrap3 %} {% load staticfiles %} {%block content%}
+<html>
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+  <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+  <link rel="stylesheet" href="{% static 'css/camera.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/superfish.js' %}"></script>
+  <script src="{% static 'js/jquery.ui.totop.js' %}"></script>
+  <script src="{% static 'js/jquery.equalheights.js' %}"></script>
+  <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.js' %}"></script>
+  <script src="{% static 'js/camera.js' %}"></script>
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  <script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+  <!--<![endif]-->
+  <script src="{% static 'booking/js/booking.js' %}"></script>
+</head>
+<body>
+{%include 'navbar.html'%}
+<div class="container">
+  <div class="sidenav">
+<a href="https://freightcargo.herokuapp.com/admin/app/newform/">Edit/Update Cargo</a>
+<a href="{%url 'new-cargo'%}">Add Cargo</a>
+<a href="{%url 'cargo'%}">Cargo</a>
+<a href="/logout">Log out</a>
+</div>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+<div class="col-md-11">
+<table id="customers">
+<tr>
+<th>Track No</th>
+<th>Depositor Name</th>
+<th>Receiver Name</th>
+<th>Origin</th>
+<th>Destination</th>
+</tr>
+        <!-- Looping through cargo   -->
+        {%  for secure_item in sec %}
+        <tr>
+          <td>{{secure_item.TrackNo}}</td>
+          <td>{{secure_item.DepositorName}}</td>
+          <td>{{secure_item.RecieverName}}</td>
+          <td>{{secure_item.Origin}}</td>
+          <td>{{secure_item.Destination}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+      </div>
+      </div>
+      </div>
+    </body>
+    </html>
+    {%include 'footer.html'%}
+    <!--==============================footer=================================-->
+
+    <style media="screen">
+    #admin{
+      background-color: orange;
+    }
+    #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+    body{
+      height: 100%;
+      padding-top: 5%;
+      background-color: white;
+      color: black;
+    }
+    p{
+      color: black;
+    }
+      .row{
+      	margin-left: 0px;
+      	margin-right: 0px;
+      }
+      table{
+        border-collapse: collapse;
+      }
+      .skybrand{
+          font-weight: 600;
+          font-size: 40px;
+          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      }
+  .sidenav {
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+  margin-top: 8%;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+      @media screen and (max-width: 650px) {
+      body{
+        padding-top: 0%;
+      }
+    }
+    @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+{%endblock%}

@@ -99,3 +99,7 @@ def new_secure(request):
     recipient.save()
     data = {'success': 'Secure Cargo Posted'}
     return JsonResponse(data)
+
+def secure(request):
+    sec = Secure.objects.all()
+    return render(request, 'secure.html',{"sec":sec})
