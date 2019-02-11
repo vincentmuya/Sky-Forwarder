@@ -81,6 +81,6 @@ def update_cargo(request, pk):
     return render(request, 'update_cargo.html', {'form': form})
 
 def newSecure(request):
-    current_user = reques.user
+    current_user = request.user
     form = SecureForm()
     return render(request, 'new_secure.html', {"form":form})
