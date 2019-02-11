@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from django.http import HttpResponse, Http404,HttpResponseRedirect
-from .forms import NewNewFormForm
-from .models import NewForm
+from .forms import NewNewFormForm, SecureForm
+from .models import NewForm, Secure
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 
@@ -79,3 +79,8 @@ def update_cargo(request, pk):
         form.save()
         return redirect('/')
     return render(request, 'update_cargo.html', {'form': form})
+
+def newSecure(request):
+    current_user = reques.user
+    form = SecureForm()
+    return render(request, 'new_secure.html', {"form":form})

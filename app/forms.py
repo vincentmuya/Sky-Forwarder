@@ -1,5 +1,5 @@
 from django import forms
-from .models import NewForm
+from .models import NewForm, Secure
 
 class NewNewFormForm(forms.ModelForm):
     class Meta:
@@ -8,3 +8,9 @@ class NewNewFormForm(forms.ModelForm):
         widgets = {
 
         }
+
+class SecureForm(forms.ModelForm):
+    class Meta:
+        model = Secure
+        exclude = []
+        widgets = {}
