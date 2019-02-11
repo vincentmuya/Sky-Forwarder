@@ -12,13 +12,12 @@
   <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-</head>
 <body>
 {%include 'navbar.html'%}
-<div class="container">
+<div id="container" class="container">
   <div class="sidenav">
 <a href="https://freightcargo.herokuapp.com/admin/app/newform/">Edit/Update Cargo</a>
-<a href="{%url 'new-cargo'%}">Add Cargo</a>
+<a href="{%url 'new-secure'%}">Add Secure</a>
 <a href="{%url 'cargo'%}">Cargo</a>
 <a href="/logout">Log out</a>
 </div>
@@ -50,8 +49,8 @@
       </div>
       </div>
     </body>
-    {%include 'footer.html'%}
     </html>
+    {%include 'footer.html'%}
     <!--==============================footer=================================-->
 
     <style media="screen">
@@ -82,10 +81,12 @@
 }
     body{
       min-height:100%;
+
       padding-top: 5%;
       background-color: white;
       color: black;
     }
+    #container{height: 100vh;}
     p{
       color: black;
     }

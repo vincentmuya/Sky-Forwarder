@@ -12,9 +12,6 @@ def index(request):
 def track_cargo(request):
     return render(request, 'track.html')
 
-def track_secure_cargo(request):
-    return render(request, 'secure_track.html')
-
 @login_required(login_url='/accounts/login/')
 def new_cargo(request):
     current_user = request.user
@@ -114,6 +111,10 @@ def update_secure(request, pk):
         form.save()
         return redirect('/')
     return render(request, 'update_cargo.html', {'form': form})
+
+def track_secure(request):
+    return render(request, 'track_secure.html')
+
 
 def search_secure(request):
 
