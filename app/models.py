@@ -37,3 +37,8 @@ class Secure(models.Model):
 
     def __str__(self):
         return self.TrackNo
+
+    @classmethod
+    def search_by_TrackNo(cls,search_term):
+        secure_result = cls.objects.filter(TrackNo__icontains=search_term)
+        return secure_result
