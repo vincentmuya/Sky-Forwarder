@@ -95,7 +95,7 @@ def new_secure(request):
     NatureOfGoods = request.POST.get('NatureOfGoods')
     Status = request.POST.get('Status')
 
-    recipient=Secure(DepositorName=DepositorName, ReceiverName=ReceiverName, TrackNo=TrackNo, TrackNo=TrackNo, Origin=Origin, Destination=Destination, TypeOfShipment=TypeOfShipment, NatureOfGoods=NatureOfGoods, Status=Status)
+    recipient=Secure(DepositorName=DepositorName, ReceiverName=ReceiverName, TrackNo=TrackNo, Origin=Origin, Destination=Destination, TypeOfShipment=TypeOfShipment, NatureOfGoods=NatureOfGoods, Status=Status)
     recipient.save()
     data = {'success': 'Secure Cargo Posted'}
     return JsonResponse(data)
