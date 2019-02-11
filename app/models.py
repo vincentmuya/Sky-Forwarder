@@ -24,3 +24,16 @@ class NewForm(models.Model):
     def search_by_referenceID(cls,search_term):
         results = cls.objects.filter(referenceID__icontains=search_term)
         return results
+
+class Secure(models.Model):
+    DepositorName=models.CharField(max_length = 2000)
+    ReceiverName=models.CharField(max_length = 2000)
+    TrackNo = models.CharField(max_length = 2000)
+    Origin = models.CharField(max_length = 2000)
+    Destination = models.CharField(max_length = 2000)
+    TypeOfShipment = models.CharField(max_length = 2000)
+    NatureOfGoods = models.TextField(max_length = 5000)
+    Status = models.TextField(max_length = 5000)
+
+    def __str__(self):
+        return self.TrackNo
