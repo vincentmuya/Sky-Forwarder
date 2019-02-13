@@ -29,6 +29,7 @@
 <body>
 {%include 'navbar.html'%}
 <div id="container" class="container">
+  <h1 class="cargoheading"><span style="color:blue">Cargo</span> <span style="color:orange">List</span></h1>
   <div class="sidenav">
 <a href="https://freightcargo.herokuapp.com/admin/app/newform/">Edit/Update Cargo</a>
 <a href="{%url 'new-cargo'%}">Add Cargo</a>
@@ -68,6 +69,11 @@
     <!--==============================footer=================================-->
 
     <style media="screen">
+    .cargoheading{
+      font-size: 45px;
+      text-align: center;
+    	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
     #admin{
       background-color: orange;
     }
