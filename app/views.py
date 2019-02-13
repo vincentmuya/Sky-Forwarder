@@ -113,4 +113,4 @@ def update_secure(request, pk):
     return render(request, 'update_cargo.html', {'form': form})
 
 def track_secure(request):
-    return render(request, 'secure_track.html')
+    return render(request, 'track_secure.html')
