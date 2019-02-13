@@ -13,20 +13,18 @@
 </head>
 {%include 'navbar.html'%}
 <body>
-<div class="container">
-
-  <div class="row">
-    {% if referenceID%}
-      <h2>Found {{ referenceID|length }} of searched term {{message}}</h2>
-    {% else %}
-      <h2> Found 0 referenceID for the search term {{message}}</h2>
-    {% endif %}
-  </div>
+<div class="container" id="container">
 
   <!-- <div class="row"> -->
 <div class="resul">
   <h1 class="trackresult"><span style="color:blue">Tracking</span> <span style="color:orange">Results</span></h1>
 </div>
+{% if referenceID%}
+  <h2>Found {{ referenceID|length }} of searched term {{message}}</h2>
+{% else %}
+  <h1 class="found0"> Found 0 TrackNo {{message}}</h1>
+  <img class="foundimg" src="http://2.bp.blogspot.com/-Eh7StN6_XdE/U9dBUtxWWII/AAAAAAAAA4o/65LhDDxi-SQ/s1600/questions.jpg" alt="">
+{% endif %}
   {% if referenceID %}
     {% for result in referenceID%}
     <div class="row">
@@ -89,6 +87,15 @@
 </body>
 {%include 'footer.html'%}
 <style media="screen">
+#container{height: 100vh;}
+.found0{
+  text-align: center;
+}
+.foundimg{
+  width: 80%;
+  height: 75%;
+  margin-left: 10%;
+}
 h1{
   font-size: 40px;
 }
