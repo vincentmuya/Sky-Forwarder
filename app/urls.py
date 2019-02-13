@@ -18,6 +18,7 @@ urlpatterns=[
     url(r'^new/secure$', views.newSecure, name='new-secure'),
     url(r'^ajax/newsecure/$', views.new_secure, name='newsecure'),
     url(r'^update/secure/(?P<pk>\d+)/$', views.update_secure, name='update-secure'),
-    url(r'^securetrack',views.track_secure, name='track-secure'),
+    url(r'^securetrack/',views.track_secure, name='track-secure'),
+    url(r'^securesearch/', views.search_secure, name='search-secure'),
 
     ]

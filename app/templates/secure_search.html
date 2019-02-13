@@ -1,0 +1,204 @@
+{%extends 'base.html'%} {% load bootstrap3 %} {% load staticfiles %} {%block content%}
+
+<head>
+  <title>Sky Forwarder International</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+  <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+  <link rel="stylesheet" href="{% static 'css/camera.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+{%include 'navbar.html'%}
+<body>
+<div class="container">
+
+  <div class="row">
+    {% if referenceID%}
+      <h2>Found {{ TrackNo|length }} of searched term {{message}}</h2>
+    {% else %}
+      <h2> Found 0 TrackNo for the search term {{message}}</h2>
+    {% endif %}
+  </div>
+
+  <!-- <div class="row"> -->
+<div class="resul">
+  <h1 class="trackresult"><span style="color:blue">Tracking</span> <span style="color:orange">Results</span></h1>
+</div>
+  {% if TrackNo %}
+    {% for secure_result in TrackNo%}
+    <div class="row">
+      <div class="col-md-1">
+  <h1></h1>
+      </div>
+      <div class="col-md-10">
+  <div class="panel panel-default">
+    <div class="panel-heading"><strong>Track Number:</strong> {{secure_result.TrackNo}}   <img src="http://qrcode.kaywa.com/img.php?s=8&d=Certified%20Post%20Whore%21" class="qrcode" alt="Qr code"></div>
+    <br>
+<div class="track-card" >
+  <div class="row">
+    <div class="col-md-6">
+      <div class="credentials">
+      <h2 class="titlebold">Depositor Name:</h2>
+      <p>{{secure_result.DepositorName}}</p>
+      <h2 class="senderadd"><strong>:</strong></h2>
+      <p>{{}}</p>
+    </div>
+
+    </div>
+  <div class="col-md-6">
+    <div class="credentials">
+    <h2 class="titlebold">Receiver Name:</h2>
+    <p>{{secure_result.ReceiverName}}</p>
+    <h2 class="receiveradd"><strong>:</strong> </h2>
+    <p>{{}}</p>
+    </div>
+  </div>
+  </div>
+  <br>
+  <table id="customers">
+  <tr>
+    <td><strong>Origin: </strong><br>{{secure_result.Origin}}</td>
+    <td><strong>Destination: </strong><br>{{secure_result.Destination}}</td>
+  </tr>
+  <tr>
+    <td><strong>Type Of Shipment: </strong>{{secure_result.TypeOfShipment}}</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Nature Of Goods: </strong>{{secure_result.NatureOfGoods}}</td>
+  </tr>
+  <tr>
+    <td><strong>Status: </strong>{{secure_result.Status}}</td>
+  </tr>
+  </table>
+</div>
+</div>
+</div>
+<div class="col-md-1">
+<h1></h1>
+</div>
+</div>
+    {% endfor %}
+  {% endif %}
+  </div>
+</body>
+{%include 'footer.html'%}
+<style media="screen">
+h1{
+  font-size: 40px;
+}
+.titlebold{
+  font-weight: 600;
+  font-size: 30px;
+}
+.receiveradd,.senderadd{
+  font-size: 20px;
+}
+.panel{
+  width: 100%;
+}
+.trackresult{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  font-size: 45px;
+  color: black;
+}
+.qrcode{
+  width: 40px;
+  height: 30px;
+}
+.track-card{
+  width: 60rem;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+        width: 95.8%;
+}
+
+#customers td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 110px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.credentials{
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px;
+  padding: 2%;
+  margin-left: 10%;
+  width: 60%;
+}
+.credentials h1{
+  font-size: 40px;
+}
+footer{
+      background-color: #4a4a4a;
+}
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+body{
+  padding-top: 5%;
+  background-color: white;
+  color: black;
+  max-width: 100%;
+}
+/*.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}*/
+@media screen and (max-width: 650px) {
+  .track-card{
+    width: 21rem;
+  }
+.shipment-result{
+    font-size: 25px;
+  }
+  .credentials h1 {
+      font-size: 25px;
+  }
+  body{
+    padding-top: 0%;
+  }
+}
+</style>
+{% endblock %}
+<!--scripts  -->
+{% block scripts %}
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- pooper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js"></script>
+{% bootstrap_javascript %}
+
+<script>
+$(document).ready(function() {
+
+
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
+
+{% comment %}
+<script src="" type="text/javascript" charset="utf-8"></script> {% endcomment %} {% endblock %}
