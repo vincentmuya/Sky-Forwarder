@@ -113,18 +113,4 @@ def update_secure(request, pk):
     return render(request, 'update_cargo.html', {'form': form})
 
 def track_secure(request):
-    return render(request, 'track_secure.html')
-
-
-def search_secure(request):
-
-    if 'TrackNo' in request.GET and request.GET["TrackNo"]:
-        search_term = request.GET.get("TrackNo")
-        secure_ref = Secure.search_by_TrackNo(search_term)
-        message = f"{search_term}"
-
-        return render(request, 'secure_result.html',{"message":message,"TrackNo":secure_ref})
-
-    else:
-        message = "You haven't searched for any term"
-        return render(request, 'secure_result.html',{"message":message})
+    return render(request, 'secure_track.html')
