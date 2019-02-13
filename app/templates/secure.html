@@ -17,10 +17,11 @@
 <div id="container" class="container">
   <h1 class="secureheading">Secure<span style="color:blue"> Cargo</span> <span style="color:orange">List</span></h1>
   <div class="sidenav">
-<a href="https://freightcargo.herokuapp.com/admin/app/newform/">Edit/Update Cargo</a>
-<a href="{%url 'new-secure'%}">Add Secure</a>
-<a href="{%url 'cargo'%}">Cargo</a>
-<a href="/logout">Log out</a>
+    <h3 span style="text-align:center">Menu</h3>
+<a href="https://freightcargo.herokuapp.com/admin/app/newform/"><span class="glyphicon glyphicon-pencil"></span>  Edit/Update Cargo</a>
+<a href="{%url 'new-secure'%}"><span class="glyphicon glyphicon-plus"></span>  Add Secure</a>
+<a href="{%url 'cargo'%}"><span class="glyphicon glyphicon-stop"></span>  Cargo</a>
+<a href="/logout"><span class="glyphicon glyphicon-log-out"></span>  Log out</a>
 </div>
 <div class="row">
   <div class="col-md-1">
@@ -109,7 +110,7 @@
           text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
   .sidenav {
-  width: 180px;
+  width: 190px;
   position: fixed;
   z-index: 1;
   top: 20px;
