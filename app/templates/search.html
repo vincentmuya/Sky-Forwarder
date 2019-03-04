@@ -71,15 +71,15 @@
   </tr>
   <tr>
     <td><strong>Goods Description: </strong>{{result.GoodsDescription}}</td>
-    <td></td>
+    <!-- <td><strong>Status</strong>{{result.Status}}</td> -->
   </tr>
   </table>
 </div>
 </div>
+<td bgcolor="#790000"colspan="4" class=""><p style="color:red; text-align:center; font-family:courier; "><blink>>>>>>{{result.Status}}<<<<<<<br /></blink></p></td>
 </div>
 <div class="col-md-1">
 <h1></h1>
-<p id="demo"></p>
 </div>
 </div>
     {% endfor %}
@@ -169,15 +169,6 @@ body{
   color: black;
   max-width: 100%;
 }
-/*.blink_me {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}*/
 @media screen and (max-width: 650px) {
   .track-card{
     width: 21rem;
@@ -203,34 +194,18 @@ body{
 {% bootstrap_javascript %}
 
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+function blink() {
+    var blinks = document.getElementsByTagName('blink');
+    for (var i = blinks.length - 1; i >= 0; i--) {
+      var s = blinks[i];
+      s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+    }
+    window.setTimeout(blink, 1000);
   }
-}, 1000);
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+  else if (window.addEventListener) window.addEventListener("load", blink, false);
+  else if (window.attachEvent) window.attachEvent("onload", blink);
+  else window.onload = blink;
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
 
