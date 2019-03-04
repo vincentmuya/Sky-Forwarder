@@ -34,8 +34,9 @@
     <div class="container">
   <form  action="{%url 'newcargo'%}" method="post" enctype="multipart/form-data">
     {%csrf_token%}
-
+     <table border="1">
     {% bootstrap_form form%}
+  </table>
     <input type="submit" class="btn btn-success btn-lg" value="Post">
   </form>
   </div>
@@ -46,6 +47,16 @@ body{
   padding-top: 5%;
   background-color: white;
   color: black;
+}
+.form-group {
+    margin-bottom: 10px;
+    width: 400px;
+    margin-left: 10px;
+    display: inline-block;
+}
+textarea.form-control {
+    height: 100px;
+    padding: 0px;
 }
 </style>
 {% endblock %}
