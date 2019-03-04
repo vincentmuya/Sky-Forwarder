@@ -54,22 +54,17 @@
   <br>
   <table id="customers">
   <tr>
-    <td><strong>Origin: </strong><br>{{secure_result.Origin}}</td>
-    <td><strong>Destination: </strong><br>{{secure_result.Destination}}</td>
+    <td><strong>Origin: </strong>{{secure_result.Origin}}</td>
+    <td><strong>Destination: </strong>{{secure_result.Destination}}</td>
   </tr>
   <tr>
     <td><strong>Type Of Shipment: </strong>{{secure_result.TypeOfShipment}}</td>
-    <td></td>
-  </tr>
-  <tr>
     <td><strong>Nature Of Goods: </strong>{{secure_result.NatureOfGoods}}</td>
-  </tr>
-  <tr>
-    <td><strong>Status: </strong>{{secure_result.Status}}</td>
   </tr>
   </table>
 </div>
 </div>
+<td bgcolor="#790000"colspan="4" class=""><strong>Status:</strong> <blink style="color:red;">>>>>>{{secure_result.Status}}<<<<<<<br /></blink></td>
 </div>
 <div class="col-md-1">
 <h1></h1>
@@ -162,15 +157,6 @@ body{
   color: black;
   max-width: 100%;
 }
-/*.blink_me {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}*/
 @media screen and (max-width: 650px) {
   .track-card{
     width: 21rem;
@@ -196,10 +182,18 @@ body{
 {% bootstrap_javascript %}
 
 <script>
-$(document).ready(function() {
-
-
-});
+function blink() {
+    var blinks = document.getElementsByTagName('blink');
+    for (var i = blinks.length - 1; i >= 0; i--) {
+      var s = blinks[i];
+      s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+    }
+    window.setTimeout(blink, 1000);
+  }
+  if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+  else if (window.addEventListener) window.addEventListener("load", blink, false);
+  else if (window.attachEvent) window.attachEvent("onload", blink);
+  else window.onload = blink;
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco&signed_in=true&libraries=places&callback=initialize" async defer></script>
 
