@@ -52,7 +52,7 @@ def search_results(request):
     if 'referenceID' in request.GET and request.GET["referenceID"]:
         search_term = request.GET.get("referenceID")
         searched_ref = NewForm.search_by_referenceID(search_term)
-        message = f"{search_term}"
+        message = "{}".format(search_term)
 
         return render(request, 'search.html',{"message":message,"referenceID":searched_ref})
 
@@ -125,7 +125,7 @@ def search_secure(request):
     if 'TrackNo' in request.GET and request.GET["TrackNo"]:
         search_term = request.GET.get("TrackNo")
         searched_ref = Secure.search_by_TrackNo(search_term)
-        message = f"{search_term}"
+        message = "{}".format(search_term)
 
         return render(request, 'secure_search.html',{"message":message,"TrackNo":searched_ref})
 
