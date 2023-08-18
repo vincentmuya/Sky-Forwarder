@@ -1,512 +1,512 @@
-{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+{%extends 'base.html'%} {%load static%} {%block content%} {% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Home</title>
-		<meta charset="utf-8">
-		<meta name = "format-detection" content = "telephone=no" />
-		<link rel="icon" href="{% static 'images/favicon.ico' %}">
-		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
-		<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
-		<link rel="stylesheet" href="{% static 'css/camera.css' %}">
-		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-	</head>
-	<body class="page1" id="top">
-		<div class="main">
-			{%include 'navbar.html'%}
-			<div class="slider_wrapper ">
-				<div id="myCarousel" class="carousel slide" data-ride="carousel">
-     <!-- Indicators -->
-     <ol class="carousel-indicators">
-       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-       <li data-target="#myCarousel" data-slide-to="1"></li>
-       <li data-target="#myCarousel" data-slide-to="2"></li>
-     </ol>
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<link rel="icon" href="{% static 'images/favicon.ico' %}">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+<link rel="stylesheet" href="{% static 'css/camera.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page1" id="top">
+<div class="main">
+{%include 'navbar.html'%}
+<div class="slider_wrapper ">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
 
-     <!-- Wrapper for slides -->
-     <div class="carousel-inner">
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
 
 
-			 <div class="item active">
-				 <img src="{%static 'images/airimport.jpg'%}" alt="Land" id='carousel'>
-				 <div class="carousel-caption">
-				<h1>Air Freight</h1>
-				<h5>Safety, quality, professionalism.</h5>
-			</div>
-			 </div>
+<div class="item active">
+<img src="{%static 'images/airimport.jpg'%}" alt="Land" id='carousel'>
+<div class="carousel-caption">
+<h1>Air Freight</h1>
+<h5>Safety, quality, professionalism.</h5>
+</div>
+</div>
 
-       <div class="item">
-         <img src="{%static 'images/sea.jpg'%}" alt="freight" id='carousel'>
-				 <div class="carousel-caption">
-        <h1>Water Freight</h1>
-        <h5>Efficient. Safe. Reliable.</h5>
-      </div>
-       </div>
+<div class="item">
+<img src="{%static 'images/sea.jpg'%}" alt="freight" id='carousel'>
+<div class="carousel-caption">
+<h1>Water Freight</h1>
+<h5>Efficient. Safe. Reliable.</h5>
+</div>
+</div>
 
-       <div class="item">
-         <img src="{%static 'images/warehouse.jpg'%}" alt="New york" id='carousel'>
-				 <div class="carousel-caption">
-        <h1>Warehousing and Storage</h1>
-        <h5>We care about your load</h5>
-      </div>
-       </div>
-     </div>
+<div class="item">
+<img src="{%static 'images/warehouse.jpg'%}" alt="New york" id='carousel'>
+<div class="carousel-caption">
+<h1>Warehousing and Storage</h1>
+<h5>We care about your load</h5>
+</div>
+</div>
+</div>
 
-     <!-- Left and right controls -->
-     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-       <span class="glyphicon glyphicon-chevron-left"></span>
-       <span class="sr-only">Previous</span>
-     </a>
-     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-       <span class="glyphicon glyphicon-chevron-right"></span>
-       <span class="sr-only">Next</span>
-     </a>
-   </div>
-			</div>
-			<br>
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+<br>
 <!--SERVICE AREA-->
 <section class="service-area" id="services">
-		<div class="service-top-area padding-top">
-				<div class="container">
-						<div class="row">
-								<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-										<div class="service-content wow fadeIn">
-												<h2>We Offer Quick & Powerful Logistics Solution</h2>
-												<h2>Below is a brief explanation of our sevices:</h2>
-												</div>
-								</div>
-								<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-										<div class="service-catalouge-content-area wow fadeIn">
-												<div class="service-catalouge-bg"></div>
-												<div class="row">
-														<div class="col-md-7 col-lg-7 col-md-offset-5 col-lg-offset-5 col-sm-12 col-xs-12">
-																<div class="catalouge-content">
-																		<h3>Why Choose Us ?</h3>
-																		<ul>
-																				<li><i class="fa fa-check"></i> A Partnership Based On Trust.</li>
-																				<li><i class="fa fa-check"></i> Go Beyond Logistics, Make The World Go Round And Revolution Business.</li>
-																				<li><i class="fa fa-check"></i> Shipments delivered on time with no hassle.</li>
-																				<li><i class="fa fa-check"></i> We take pride in serving our customers safely.</li>
-																		</ul>
-																</div>
-														</div>
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-		</div>
-		<div class="service-bottom-area section-padding">
-				<div class="service-bottom-area-bg"></div>
-				<div class="container">
-						<div class="row">
-								<div class="col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-12 col-xs-12">
-										<div class="service-list wow fadeIn">
-												<div class="single-service">
-														<div class="service-icon-hexagon">
-																<div class="hex">
-																		<div class="service-icon">
-																				<i class="fa fa-dropbox"></i>
-																		</div>
-																</div>
-														</div>
-														<div class="service-details">
-																<h4>Ware House</h4>
-																<p>Warehousing and Storage services offered by the Sky Fowarder International Cargo have become an integral part of our client’s require...</p>
-														<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
-													</div>
-												</div>
-												<div class="single-service">
-														<div class="service-icon-hexagon">
-																<div class="hex">
-																		<div class="service-icon"><i class="fa fa-truck"></i></div>
-																</div>
-														</div>
-														<div class="service-details">
-																<h4>Road Freight</h4>
-																<p>Depending on your volumes and requirements, Sky Fowarder International Cargo brings you the means of transport that is most competiti...</p>
-														<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
-													</div>
-												</div>
-												<div class="single-service">
-														<div class="service-icon-hexagon">
-																<div class="hex">
-																		<div class="service-icon"><i class="fa fa-ship"></i></div>
-																</div>
-														</div>
-														<div class="service-details">
-																<h4>Sea Freight</h4>
-																<p>Our independent position means that we are free to choose the option that best meets your needs and wishes. With your own staff or co... </p>
-														<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
-													</div>
-												</div>
-												<div class="single-service">
-														<div class="service-icon-hexagon">
-																<div class="hex">
-																		<div class="service-icon"><i class="fa fa-plane"></i></div>
-																</div>
-														</div>
-														<div class="service-details">
-																<h4>Air Freight</h4>
-																<p>With a full range of air freight solutions across the globe and an entirely independent position, we can create the perfect air freight solut...</p>
-														<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
-													</div>
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-		</div>
-		<br>
+<div class="service-top-area padding-top">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+<div class="service-content wow fadeIn">
+<h2>We Offer Quick & Powerful Logistics Solution</h2>
+<h2>Below is a brief explanation of our sevices:</h2>
+</div>
+</div>
+<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="service-catalouge-content-area wow fadeIn">
+<div class="service-catalouge-bg"></div>
+<div class="row">
+<div class="col-md-7 col-lg-7 col-md-offset-5 col-lg-offset-5 col-sm-12 col-xs-12">
+<div class="catalouge-content">
+<h3>Why Choose Us ?</h3>
+<ul>
+<li><i class="fa fa-check"></i> A Partnership Based On Trust.</li>
+<li><i class="fa fa-check"></i> Go Beyond Logistics, Make The World Go Round And Revolution Business.</li>
+<li><i class="fa fa-check"></i> Shipments delivered on time with no hassle.</li>
+<li><i class="fa fa-check"></i> We take pride in serving our customers safely.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="service-bottom-area section-padding">
+<div class="service-bottom-area-bg"></div>
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-lg-6 col-md-offset-6 col-lg-offset-6 col-sm-12 col-xs-12">
+<div class="service-list wow fadeIn">
+<div class="single-service">
+<div class="service-icon-hexagon">
+<div class="hex">
+<div class="service-icon">
+<i class="fa fa-dropbox"></i>
+</div>
+</div>
+</div>
+<div class="service-details">
+<h4>Ware House</h4>
+<p>Warehousing and Storage services offered by the Sky Fowarder International Cargo have become an integral part of our client’s require...</p>
+<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
+</div>
+</div>
+<div class="single-service">
+<div class="service-icon-hexagon">
+<div class="hex">
+<div class="service-icon"><i class="fa fa-truck"></i></div>
+</div>
+</div>
+<div class="service-details">
+<h4>Road Freight</h4>
+<p>Depending on your volumes and requirements, Sky Fowarder International Cargo brings you the means of transport that is most competiti...</p>
+<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
+</div>
+</div>
+<div class="single-service">
+<div class="service-icon-hexagon">
+<div class="hex">
+<div class="service-icon"><i class="fa fa-ship"></i></div>
+</div>
+</div>
+<div class="service-details">
+<h4>Sea Freight</h4>
+<p>Our independent position means that we are free to choose the option that best meets your needs and wishes. With your own staff or co... </p>
+<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
+</div>
+</div>
+<div class="single-service">
+<div class="service-icon-hexagon">
+<div class="hex">
+<div class="service-icon"><i class="fa fa-plane"></i></div>
+</div>
+</div>
+<div class="service-details">
+<h4>Air Freight</h4>
+<p>With a full range of air freight solutions across the globe and an entirely independent position, we can create the perfect air freight solut...</p>
+<button class="btn btn-primary" id="readmore"><a href="{%url 'service'%}">Read More</a></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
 </section>
 <!--SERVICE AREA END-->
-			<br>
-			<section class="mission">
-				<h2 class="deliver">Delivering safely, <span style="color:blue">On time and</span> <span style="color:orange">with Professionalism</span></h2>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="https://logistimatics.com/wp-content/uploads/2018/05/iphone_x_top-500x547.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Tracking Solutions</h5>
-    <p class="card-text">Stay up-to-date with an integrated view of vital shipment details throughout your entire supply chain. With Sky Forwarder Tracking, you have the tools you need to track a single shipment moving across the country or containers moving around the globe.We will provide you with real time visibility for tracking your shipment</p>
-  </div>
+<br>
+<section class="mission">
+<h2 class="deliver">Delivering safely, <span style="color:blue">On time and</span> <span style="color:orange">with Professionalism</span></h2>
+<div class="row">
+<div class="col-md-4">
+<div class="card" style="width: 20rem;">
+<img class="card-img-top" src="https://logistimatics.com/wp-content/uploads/2018/05/iphone_x_top-500x547.jpg" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">Tracking Solutions</h5>
+<p class="card-text">Stay up-to-date with an integrated view of vital shipment details throughout your entire supply chain. With Sky Forwarder Tracking, you have the tools you need to track a single shipment moving across the country or containers moving around the globe.We will provide you with real time visibility for tracking your shipment</p>
 </div>
-				</div>
-				<div class="col-md-4">
-					<div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQptZq6jgX7j6xiaT9o6pIV1N1VG79_s0wN7jYSuzQlBw1vNy6&usqp=CAU" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Our Vision & Mission</h5>
-    <p class="card-text"><strong>Vision</strong>: Sky Forwarder offers services such as collection and delivery options, delivery notification, and special handling to meet your shipping needs</p>
-		<p class="card-text"><strong>Mission</strong>:
-			Provide efficient timely services to the ship, cargo owner, clearing agents and the crew members.
-			To be number one freight forwarding company in the region.
-		</p>
-  </div>
 </div>
-				</div>
-				<div class="col-md-4">
-					<div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="https://www.conovercompany.com/wp-content/uploads/2015/12/Conover-Professionalism-BlogImage.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Professionalism</h5>
-    <p class="card-text">At Sky Forwarder International we have a team of experts specialized in providing value added Road freight forwarding services to companies large and small.Our experienced team will provide a solution to fit your airfreight requirements. Whatever your particular requirements.</p>
-  </div>
 </div>
-				</div>
-			</div>
-			</section>
-		</div>
+<div class="col-md-4">
+<div class="card" style="width: 20rem;">
+<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQptZq6jgX7j6xiaT9o6pIV1N1VG79_s0wN7jYSuzQlBw1vNy6&usqp=CAU" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">Our Vision & Mission</h5>
+<p class="card-text"><strong>Vision</strong>: Sky Forwarder offers services such as collection and delivery options, delivery notification, and special handling to meet your shipping needs</p>
+<p class="card-text"><strong>Mission</strong>:
+Provide efficient timely services to the ship, cargo owner, clearing agents and the crew members.
+To be number one freight forwarding company in the region.
+</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card" style="width: 20rem;">
+<img class="card-img-top" src="https://www.conovercompany.com/wp-content/uploads/2015/12/Conover-Professionalism-BlogImage.png" alt="Card image cap">
+<div class="card-body">
+<h5 class="card-title">Professionalism</h5>
+<p class="card-text">At Sky Forwarder International we have a team of experts specialized in providing value added Road freight forwarding services to companies large and small.Our experienced team will provide a solution to fit your airfreight requirements. Whatever your particular requirements.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
 <!--==============================footer=================================-->
 </body>
-	{%include 'footer.html'%}
+{%include 'footer.html'%}
 </html>
 <style media="screen">
 .deliver{
-	/*font-weight: 600;*/
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+/*font-weight: 600;*/
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 #readmore {
-    background-color: orange;
+background-color: orange;
 }
 .card-title{
-	color: black;
+color: black;
 }
 .card-img-top{
-	height: 300px;
-	width: 305px;
+height: 300px;
+width: 305px;
 }
 .row{
-	margin-left: 0px;
-	margin-right: 0px;
+margin-left: 0px;
+margin-right: 0px;
 }
 .about{
-	color: white;
-	font-weight: 600;
+color: white;
+font-weight: 600;
 }
 .card{
-	background-color: white;
-	padding-top: 5px;
-	padding-left: 5px;
-	border-radius: 10px;
+background-color: white;
+padding-top: 5px;
+padding-left: 5px;
+border-radius: 10px;
 }
 body{
-	background-color: white;
+background-color: white;
 }
 p{
-	margin-bottom: 0px;
+margin-bottom: 0px;
 }
 h1{
-	color: white;
-	font-size: 40px;
+color: white;
+font-size: 40px;
 }
 h2{
-	color: black;
-	text-align: center;
-	font-size: 40px;
+color: black;
+text-align: center;
+font-size: 40px;
 }
 h4{
-	font-size: 20px;
+font-size: 20px;
 }
 h5{
-	color: white;
-	font-size: 20px;
+color: white;
+font-size: 20px;
 }
 .overlay{
-	background: rgba(0, 0, 0, 0.3) url('http://onlinebroker.com.ua/wp-content/uploads/2018/10/port-1.jpg') 60% / cover fixed;
-    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 5);
-		width: 100%
+background: rgba(0, 0, 0, 0.3) url('http://onlinebroker.com.ua/wp-content/uploads/2018/10/port-1.jpg') 60% / cover fixed;
+-webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
+box-shadow: inset 0 0 100px rgba(0, 0, 0, 5);
+width: 100%
 }
 /* -----------------------------
-    5. SERVICE AREA
+5. SERVICE AREA
 ------------------------------- */
 
 .service-content h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    position: relative;
+font-size: 32px;
+margin-bottom: 30px;
+padding-bottom: 15px;
+position: relative;
 }
 
 .service-content h2::after {
-    border-bottom: 1px dashed rgb(243, 156, 18);
-    bottom: 0;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 50px;
+border-bottom: 1px dashed rgb(243, 156, 18);
+bottom: 0;
+content: "";
+height: 1px;
+left: 0;
+position: absolute;
+width: 50px;
 }
 
 .service-catalouge-content-area {
-    background: rgba(0, 0, 0, 0) url("http://oscarship.com/image/4.png") no-repeat scroll center center / contain;
-    position: relative;
+background: rgba(0, 0, 0, 0) url("http://oscarship.com/image/4.png") no-repeat scroll center center / contain;
+position: relative;
 }
 
 .catalouge-content {
-    background: rgba(243, 156, 18, 0.9) none repeat scroll 0 0;
-    color: #fff;
-    /*padding: 30px;*/
+background: rgba(243, 156, 18, 0.9) none repeat scroll 0 0;
+color: #fff;
+/*padding: 30px;*/
 }
 
 .catalouge-content h3 {
-    color: #fff;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    position: relative;
-		font-size: 22px;
+color: #fff;
+margin-bottom: 30px;
+padding-bottom: 15px;
+position: relative;
+font-size: 22px;
 }
 
 .catalouge-content h3::after {
-    border-bottom: 1px dashed;
-    bottom: 0;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 50px;
+border-bottom: 1px dashed;
+bottom: 0;
+content: "";
+height: 2px;
+left: 0;
+position: absolute;
+width: 50px;
 }
 
 .catalouge-content .read-more:hover,
 .catalouge-content .read-more:focus {
-    background: #fff none repeat scroll 0 0;
-    color: #f39c12;
+background: #fff none repeat scroll 0 0;
+color: #f39c12;
 }
 
 .catalouge-content ul {
-    margin-top: 40px;
+margin-top: 40px;
 }
 
 .catalouge-content ul li {
-    margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .catalouge-content ul li i {
-    margin-right: 15px;
+margin-right: 15px;
 }
 
 /* ---------------------------
-    6. SERVIE BOTTOM AREA
+6. SERVIE BOTTOM AREA
 ----------------------------- */
 
 .service-bottom-area {
-    position: relative;
+position: relative;
 }
 
 .service-bottom-area-bg {
-    background: rgba(0, 0, 0, 0) url("https://cdn.nanalyze.com/uploads/2017/09/International-Freight-Forwarding-Software-Teaser.jpg") repeat scroll 0 0;
-    background-repeat: no-repeat;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+background: rgba(0, 0, 0, 0) url("https://www.exfreight.com/wp-content/uploads/2021/07/iStock-1208766085.jpg") repeat scroll 0 0;
+background-repeat: no-repeat;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
 }
 
 .service-bottom-area-bg::after {
-    background: #f5f7f9 none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
+background: #f5f7f9 none repeat scroll 0 0;
+content: "";
+height: 100%;
+position: absolute;
+right: 0;
+top: 0;
+width: 50%;
 }
 
 .single-service {
-    margin-bottom: 50px;
-    padding-left: 50px;
-    position: relative;
+margin-bottom: 50px;
+padding-left: 50px;
+position: relative;
 }
 
 .service-list .single-service:last-child {
-    margin-bottom: 0;
+margin-bottom: 0;
 }
 
 .service-icon-hexagon {
-    left: -43px;
-    position: absolute;
-    top: -25px;
+left: -43px;
+position: absolute;
+top: -25px;
 }
 
 .hex {
-    background: #f5f7f9 none repeat scroll 0 0;
-    border-radius: 1em / 3.5em;
-    display: inline-block;
-    height: 5.2em;
-    margin: 1em 4.61538em 1em auto;
-    position: relative;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transition: all 150ms ease-in-out 0s;
-    transition: all 150ms ease-in-out 0s;
-    width: 4em;
+background: #f5f7f9 none repeat scroll 0 0;
+border-radius: 1em / 3.5em;
+display: inline-block;
+height: 5.2em;
+margin: 1em 4.61538em 1em auto;
+position: relative;
+-webkit-transform: rotate(-90deg);
+transform: rotate(-90deg);
+-webkit-transition: all 150ms ease-in-out 0s;
+transition: all 150ms ease-in-out 0s;
+width: 4em;
 }
 
 .hex:before,
 .hex:after {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    background: inherit;
-    content: '';
+position: absolute;
+width: inherit;
+height: inherit;
+border-radius: inherit;
+background: inherit;
+content: '';
 }
 
 .hex:before {
-    -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
+-webkit-transform: rotate(60deg);
+transform: rotate(60deg);
 }
 
 .hex:after {
-    -webkit-transform: rotate(-60deg);
-    transform: rotate(-60deg);
+-webkit-transform: rotate(-60deg);
+transform: rotate(-60deg);
 }
 
 .service-icon {
-    background: #5d6b82 none repeat scroll 0 0;
-    bottom: 7px;
-    color: #fff;
-    font-size: 24px;
-    height: 60px;
-    padding-top: 18px;
-    position: absolute;
-    right: 11px;
-    text-align: center;
-    -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    width: 34px;
-    z-index: 1;
+background: #5d6b82 none repeat scroll 0 0;
+bottom: 7px;
+color: #fff;
+font-size: 24px;
+height: 60px;
+padding-top: 18px;
+position: absolute;
+right: 11px;
+text-align: center;
+-webkit-transform: rotate(60deg);
+transform: rotate(60deg);
+-webkit-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+width: 34px;
+z-index: 1;
 }
 
 .service-icon::before,
 .service-icon::after {
-    background: #5d6b82 none repeat scroll 0 0;
-    content: "";
-    height: 100%;
-    position: absolute;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    width: 100%;
-    z-index: -1;
+background: #5d6b82 none repeat scroll 0 0;
+content: "";
+height: 100%;
+position: absolute;
+-webkit-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+width: 100%;
+z-index: -1;
 }
 
 .service-icon::before {
-    bottom: 0;
-    right: 0;
-    -webkit-transform: rotate(60deg);
-    transform: rotate(60deg);
+bottom: 0;
+right: 0;
+-webkit-transform: rotate(60deg);
+transform: rotate(60deg);
 }
 
 .service-icon::after {
-    bottom: 0;
-    right: 0;
-    -webkit-transform: rotate(-60deg);
-    transform: rotate(-60deg);
+bottom: 0;
+right: 0;
+-webkit-transform: rotate(-60deg);
+transform: rotate(-60deg);
 }
 
 .service-icon i {
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+-webkit-transform: rotate(30deg);
+transform: rotate(30deg);
 }
 
 .service-details h4 {
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+-webkit-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
 }
 
 .single-service:hover .service-details h4 {
-    color: #f39c12;
+color: #f39c12;
 }
 
 .single-service:hover .service-icon,
 .single-service:hover .service-icon::before,
 .single-service:hover .service-icon::after {
-    background: #f39c12 none repeat scroll 0 0;
+background: #f39c12 none repeat scroll 0 0;
 }
 p{
-	color: black;
+color: black;
 }
 #carousel{
-	width: 100%;
-	height: 600px;
+width: 100%;
+height: 600px;
 }
 @media screen and (max-width: 650px) {
 h2{
-	font-size: 30px;
+font-size: 30px;
 }
 #carousel{
-	width: 100%;
-	height: 300px;
+width: 100%;
+height: 300px;
 }
 h1,h4{
-	font-size: 20px;
+font-size: 20px;
 }
 body{
-	padding-top: 17%;
+padding-top: 17%;
 }
 h5{
-	font-size: 15px;
+font-size: 15px;
 }
 .service-content h2 {
-    font-size: 18px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    position: relative;
+font-size: 18px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+position: relative;
 }
 .service-bottom-area-bg {
-    background: none;
+background: none;
 }
 footer{
-	width: 100%;
+width: 100%;
 }
 .card-title{
-	font-size: 20px;
+font-size: 20px;
 }
 }
 </style>

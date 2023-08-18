@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import dj_database_url
-from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'g6d9n^l(%)e8b6jv0y1s@b+)wwrc5r%d4ye6*brr_2_@drl%pe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -36,6 +35,7 @@ LOGIN_REDIRECT_URL ='/'
 INSTALLED_APPS = [
     'app',
     'googlemaps',
+    'whitenoise',
     'tinymce',
     'bootstrap3',
     'django.contrib.admin',
@@ -85,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'cargo',
-        'USER': 'v1nc3n7',
-        'PASSWORD': '12345'
+        'USER': 'muya',
+        'PASSWORD': '123456'
     }
 }
 db_from_env = dj_database_url.config(conn_max_age=500)
@@ -133,4 +133,4 @@ STATICFILES_DIRS = [
 os.path.join(BASE_DIR, "static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
